@@ -1,12 +1,12 @@
 export DOTFILES=$HOME/Dropbox/dotfiles
 
-source $DOTFILES/.zshrc.basic
-source $DOTFILES/.zshrc.history
+source $DOTFILES/.zsh/basic.zshrc
+source $DOTFILES/.zsh/history.zshrc
 
-[ -f $DOTFILES/.zshrc.office ] && source $DOTFILES/.zshrc.office
+[ -f $DOTFILES/office/.zshrc ] && source $DOTFILES/office/.zshrc
 
-[ -f $DOTFILES/.zshrc.home ] && source $DOTFILES/.zshrc.home
+[ -f $DOTFILES/home/.zshrc ] && source $DOTFILES/home/.zshrc
 
-[ -f $DOTFILES/.oh-my-zsh.sh ] && source $DOTFILES/.zshrc.oh-my-zsh
+[ -f $DOTFILES/oh-my-zsh/.zshrc ] && source $DOTFILES/oh-my-zsh/.zshrc
 
 export PATH=$PATH
