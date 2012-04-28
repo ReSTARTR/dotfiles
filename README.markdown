@@ -8,17 +8,30 @@
 
 Clone
 
+    cd $HOME
     git clone git@github.com:ReSTARTR/dotfiles.git
 
 Edit .zshrc dotfiles path.
 
-    export DOTFILES = path/to/dotfiles
+    export DOTFILES = $HOME/dotfiles
 
 Make some symbolic link.
 
     ln -s dotfiles/.zshrc $HOME/.zshrc
     ln -s dotfiles/.vimrc $HOME/.vimrc
     ln -s dotfiles/.tmux.conf $HOME/.tmux.conf
+
+## Install vim plugins
+
+Edit dotfiles/.vim/vundle.vimrc, and run in vim
+
+    :BundleInstall
+
+### Install plugins
+
+- unite.vim
+- neocomplcache
+- nerdtree
 
 ## add some local settings
 
