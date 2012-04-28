@@ -7,6 +7,6 @@ source $DOTFILES/.zsh/history.zshrc
 
 [ -f $DOTFILES/home/.zshrc ] && source $DOTFILES/home/.zshrc
 
-[ -f $DOTFILES/oh-my-zsh/.zshrc ] && source $DOTFILES/oh-my-zsh/.zshrc
+[ -f $DOTFILES/.zsh/oh-my-zsh.zshrc ] && source $DOTFILES/.zsh/oh-my-zsh.zshrc
 
 export PATH=$PATH
