@@ -31,9 +31,8 @@ or
     office/.zshrc
 
 
-If use oh-my-zsh
+If use [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 
     .zsh/oh-my-zsh.zshrc
-
 

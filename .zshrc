@@ -1,4 +1,4 @@
-export DOTFILES=$HOME/Dropbox/dotfiles
+export DOTFILES=path/to/dotfiles
 
 source $DOTFILES/.zsh/basic.zshrc
 source $DOTFILES/.zsh/history.zshrc
