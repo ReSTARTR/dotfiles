@@ -1,11 +1,17 @@
-autoload colors && colors
-
 #
 # .zshrc is sourced in interactive shells.
 # It should contain commands to set up aliases,
 # functions, options, key bindings, etc.
 #
 
+## bindkey
+bindkey -e
+#bindkey '\^' cdup
+
+# color
+autoload colors && colors
+
+## alias
 alias vi="vim"
 alias ll="ls -l" #--color=auto"
 alias his="history"
@@ -13,14 +19,13 @@ alias h="head"
 alias t="tail"
 alias tailf="tail -f"
 
+## completion
 autoload -U compinit
 compinit
-
-#allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
+zstyle ':completion:*:default' menu select=1
 
-bindkey -e
-
+## functions
 function cd() {builtin cd $@ && ls -v -F --color=auto}
 
 ## disable mail checking
@@ -35,7 +40,7 @@ function cd() {builtin cd $@ && ls -v -F --color=auto}
 ## never ever beep ever
 #setopt NO_BEEP
 
-## restart running processes on exit
+## HUP
 #setopt HUP
 function cdup() {
 echo
@@ -43,6 +48,4 @@ cd ..
 zle reset-prompt
 }
 zle -N cdup
-bindkey '\^' cdup
 
-zstyle ':completion:*:default' menu select=1
