@@ -18,7 +18,7 @@ Make some symbolic link.
 
     ln -s dotfiles/.zshrc $HOME/.zshrc
     ln -s dotfiles/.vimrc $HOME/.vimrc
-    ln -s dotfiles/.vimrc $HOME/.tmux.conf
+    ln -s dotfiles/.tmux.conf $HOME/.tmux.conf
 
 ## add some local settings
 
@@ -34,6 +34,6 @@ or
 If use oh-my-zsh
 
 
-    oh-my-zsh/.zshrc
+    .zsh/oh-my-zsh.zshrc
 
 
