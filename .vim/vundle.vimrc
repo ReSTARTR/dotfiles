@@ -5,26 +5,22 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
 Bundle "unite.vim"
 Bundle "neocomplcache"
 Bundle "scrooloose/nerdtree"
+Bundle 'rainbow_parentheses.vim'
+" Bundle 'tmhedberg/SimpylFold'
 
-" ...
+" Git
+Bundle 'tpope/vim-fugitive'
+
+" Python
+Bundle "pythoncomplete"
+Bundle "pylint.vim"
+Bundle 'lambdalisue/vim-python-virtualenv'
+Bundle 'pyflakes'
 
 filetype plugin indent on     " required!
 "

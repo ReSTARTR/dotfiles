@@ -5,15 +5,21 @@ set list
 set number
 set nopaste
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+" remove spaces at line end
+autocmd BufWritePre * :%s/\s\+$//ge
 
 "------------------------------
-""" tab/indent
+""" indent
 "------------------------------
 set noautoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set showtabline=2
+
+"------------------------------
+""" tab
+"------------------------------
 map  <C-t><C-n> :tabnew<CR>
 map  <C-t><C-w> :tabclose<CR>
 map  <C-t><C-t> :tabn<CR>
@@ -55,6 +61,7 @@ augroup filetypedetect
     autocmd! BufNewFile,BufRead *.py  setfiletype python
     autocmd! BufNewFile,BufRead *.txt setfiletype text
 augroup END
+autocmd FileType python compiler pylint
 
 "------------------------------
 """ PLUGINS
@@ -63,3 +70,4 @@ source ~/dotfiles/.vim/vundle.vimrc
 source ~/dotfiles/.vim/neocomplcache.vimrc
 source ~/dotfiles/.vim/nerdtree.vimrc
 source ~/dotfiles/.vim/unite.vimrc
+source ~/dotfiles/.vim/python-virtualenv.vimrc
