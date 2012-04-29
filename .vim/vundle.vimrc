@@ -10,8 +10,8 @@ Bundle 'gmarik/vundle'
 Bundle "unite.vim"
 Bundle "neocomplcache"
 Bundle "scrooloose/nerdtree"
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'rainbow_parentheses.vim'
-" Bundle 'tmhedberg/SimpylFold'
 
 " Git
 Bundle 'tpope/vim-fugitive'
@@ -22,6 +22,7 @@ Bundle "pylint.vim"
 Bundle 'lambdalisue/vim-python-virtualenv'
 Bundle 'pyflakes'
 
+filetype plugin on
 filetype plugin indent on     " required!
 "
 " Brief help

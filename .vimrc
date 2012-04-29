@@ -1,6 +1,8 @@
 "------------------------------
 """ basic
 "------------------------------
+let mapleader = ";"
+
 set list
 set number
 set nopaste
@@ -69,5 +71,7 @@ autocmd FileType python compiler pylint
 source ~/dotfiles/.vim/vundle.vimrc
 source ~/dotfiles/.vim/neocomplcache.vimrc
 source ~/dotfiles/.vim/nerdtree.vimrc
+source ~/dotfiles/.vim/nerdcommenter.vimrc
 source ~/dotfiles/.vim/unite.vimrc
 source ~/dotfiles/.vim/python-virtualenv.vimrc
+
