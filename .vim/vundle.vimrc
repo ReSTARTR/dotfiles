@@ -12,6 +12,8 @@ Bundle "neocomplcache"
 Bundle "scrooloose/nerdtree"
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'rainbow_parentheses.vim'
+" Bundle 'Smooth-Scroll'
+Bundle 'YankRing.vim'
 
 " Git
 Bundle 'tpope/vim-fugitive'
