@@ -16,6 +16,10 @@ if [ `uname` = "Darwin" ]; then
 fi
 
 plugins=($PLUGINS)
+ZSH_THEME="cloud"
+ZSH_THEME="robbyrussell"
+ZSH_THEME="clean"
+ZSH_THEME="pygmalion"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
