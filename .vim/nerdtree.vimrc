@@ -3,9 +3,10 @@
 "------------------------------
 map <F2> :NERDTreeToggle<CR>
 let NERDChristmasTree=1
-let NERDTreeIgnore=['\.pyc$']
+let NERDTreeIgnore=['\.pyc$', '^\..+py$', '\.swp']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeSplitVertical=1
-" let NERDTreeWinPos = 
-" let NERDTreeWinSize = 
+let NERDTreeWinPos = 'left'
+let NERDTreeWinSize =50
+let NERDTreeShowHidden =1
