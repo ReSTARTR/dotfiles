@@ -1,49 +1,50 @@
 [user]
-	name = 
-	email = 
-
+    name =
+    email =
 [color]
-	ui = auto
-	status= auto
-	branch= auto
-	interactive= auto
-	diff= auto
-
+    ui = auto
 [core]
-	editor = vim
-	pager = less -r
-
+    editor = vim
+    pager = less -r
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	l  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20
-	df = diff
-	dfw = diff --color-words
-
-#	st  = status
-#	sh  = show
-#	so  = remote show origin
-#	ft  = fetch
-#	up  = pull --rebase
-#	rbm = rebase master
-#	ad  = add
-#	ci  = commit -a
-#	cam = commit -a --ammend
-#	co  = checkout
-#	# branch
-#	br  = branch
-#	ba  = branch --merged
-#	bm  = branch --merged
-#	bn  = branch --no-merged
-#	# log
-#	wc  = watchanged
-#	ls  = log --stat
-#	lp  = log -p
-#	la  = log --pretty=\"format:%ad %h (%an): %s\" --date=short
-#	lr  = log origin
-#	oneline   = log --pretty=oneline
-#	ranking   = shortlog -s -n --no-merges
-#	log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
-#	log-all   = log --graph --all --color --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    l  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20
+    lg  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20 --graph
+    df = diff
+    dfw = diff --color-words
+    dfwc = diff --color-words --cached
+#    st  = status
+#    sh  = show
+#    so  = remote show origin
+#    ft  = fetch
+#    up  = pull --rebase
+#    rbm = rebase master
+#    ad  = add
+#    ci  = commit -a
+#    cam = commit -a --ammend
+#    co  = checkout
+#    # branch
+#    br  = branch
+#    ba  = branch --merged
+#    bm  = branch --merged
+#    bn  = branch --no-merged
+#    # log
+#    wc  = watchanged
+#    ls  = log --stat
+#    lp  = log -p
+#    la  = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+#    lr  = log origin
+#    oneline   = log --pretty=oneline
+#    ranking   = shortlog -s -n --no-merges
+#    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+#    log-all   = log --graph --all --color --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+[branch "master"]
+    merge = refs/heads/master
+    remote = origin
+[merge]
+    tool = origin
+[http]
+    sslVerify = false
