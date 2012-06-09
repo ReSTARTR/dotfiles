@@ -13,6 +13,9 @@
 	editor = vim
 	pager = less -r
 
+[http]
+	sslVerify = false
+
 [alias]
 	co = checkout
 	ci = commit
