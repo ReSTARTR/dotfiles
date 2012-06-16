@@ -1,5 +1,5 @@
 # ADDITIONAL PATHS
-export DEV_HOME=/Volumes/hd2/dev
+export DEV_HOME=$HOME/dev
 PATH=$DEV_HOME/local/bin:$PATH
 PATH=$HOME/local/bin:$PATH
 
@@ -10,7 +10,7 @@ PATH=$JAVA_HOME/bin:$PATH
 # Maven
 export M2_HOME=/usr/share/maven
 PATH=$M2_HOME/bin:$PATH
-export MAVEN_OPTS="-noverify" 
+export MAVEN_OPTS="-noverify"
 export MVN_HOME=/usr/local/share/apache-maven-2.2.1
 PATH=$MVN_HOME/bin:$PATH
 

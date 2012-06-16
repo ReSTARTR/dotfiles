@@ -43,9 +43,9 @@ function cd() {builtin cd $@ && ls -v -F --color=auto}
 ## HUP
 #setopt HUP
 function cdup() {
-echo
-cd ..
-zle reset-prompt
+  echo
+  cd ..
+  zle reset-prompt
 }
 zle -N cdup
 

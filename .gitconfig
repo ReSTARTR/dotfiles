@@ -15,35 +15,24 @@
     co = checkout
     ci = commit
     st = status
+    ft = fetch
+    # branch
     br = branch
-    l  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20
-    lg  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20 --graph
-    df = diff
-    dfw = diff --color-words
-    dfwc = diff --color-words --cached
-#    st  = status
-#    sh  = show
-#    so  = remote show origin
-#    ft  = fetch
-#    up  = pull --rebase
-#    rbm = rebase master
-#    ad  = add
-#    ci  = commit -a
-#    cam = commit -a --ammend
-#    co  = checkout
-#    # branch
-#    br  = branch
-#    ba  = branch --merged
 #    bm  = branch --merged
 #    bn  = branch --no-merged
-#    # log
+    # diff
+    df = diff
+    dfc = diff --cached
+    dfw = diff --color-words
+    dfwc = diff --color-words --cached
+    # log
+    l  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20
+    lg  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20 --graph
 #    wc  = watchanged
 #    ls  = log --stat
 #    lp  = log -p
 #    la  = log --pretty=\"format:%ad %h (%an): %s\" --date=short
 #    lr  = log origin
-#    oneline   = log --pretty=oneline
-#    ranking   = shortlog -s -n --no-merges
 #    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
 #    log-all   = log --graph --all --color --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
 [branch "master"]
