@@ -11,17 +11,12 @@ Clone
     cd $HOME
     git clone git@github.com:ReSTARTR/dotfiles.git
 
-Edit .zshrc dotfiles path.
-
-    export DOTFILES = $HOME/dotfiles
-
-Make some symbolic link.
-
-    ln -s dotfiles/.zshrc $HOME/.zshrc
-    ln -s dotfiles/.vimrc $HOME/.vimrc
-    ln -s dotfiles/.tmux.conf $HOME/.tmux.conf
-
 ## Install vim plugins
+
+Install vundle
+
+    mkdir -p ~/.vim/bundle
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 Edit dotfiles/.vim/vundle.vimrc, and run in vim
 
@@ -32,6 +27,12 @@ Edit dotfiles/.vim/vundle.vimrc, and run in vim
 - unite.vim
 - neocomplcache
 - nerdtree
+
+## Install oh-my-zsh
+
+If use [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 ## add some local settings
 
@@ -44,8 +45,9 @@ or
     office/.zshrc
 
 
-If use [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+## Make some symbolic link.
 
-
-    .zsh/oh-my-zsh.zshrc
+    ln -s ~/dotfiles/.zshrc ~/.zshrc
+    ln -s ~/dotfiles/.vimrc ~/.vimrc
+    ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
