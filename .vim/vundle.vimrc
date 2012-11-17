@@ -19,10 +19,7 @@ Bundle 'YankRing.vim'
 Bundle 'tpope/vim-fugitive'
 
 " Python
-Bundle "pythoncomplete"
-Bundle "pylint.vim"
-Bundle 'lambdalisue/vim-python-virtualenv'
-Bundle 'pyflakes'
+Bundle "nvie/vim-flake8"
 
 filetype plugin on
 filetype plugin indent on     " required!

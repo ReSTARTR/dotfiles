@@ -32,3 +32,7 @@ fi
 if [ ! -f ~/.zshrc ]; then
     ln -s ~/dotfiles/.zshrc ~/.zshrc
 fi
+
+if [ ! `which flake8` ]; then
+    sudo easy_install flake8
+fi

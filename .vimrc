@@ -7,6 +7,10 @@ set list
 set number
 set nopaste
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
+map <F5> :set listchars=""<CR><ESC>
+map <F6> :!inspect_python %<CR>
+
 " remove spaces at line end
 autocmd BufWritePre * :%s/\s\+$//ge
 
@@ -63,7 +67,7 @@ augroup filetypedetect
     autocmd! BufNewFile,BufRead *.py  setfiletype python
     autocmd! BufNewFile,BufRead *.txt setfiletype text
 augroup END
-autocmd FileType python compiler pylint
+
 
 "------------------------------
 """ PLUGINS
@@ -76,3 +80,5 @@ source ~/dotfiles/.vim/nerdtree.vimrc
 " source ~/dotfiles/.vim/python-virtualenv.vimrc
 source ~/dotfiles/.vim/yankring.vimrc
 
+" Flake8
+let g:flake8_ignore="E501,E128,E124,E221"
