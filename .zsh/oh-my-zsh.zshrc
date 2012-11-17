@@ -6,20 +6,19 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="linuxonly"
-PLUGINS="git pip"
+# ZSH_THEME="linuxonly"
+# ZSH_THEME="cloud"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="clean"
+ZSH_THEME="pygmalion"
 
+PLUGINS="git pip python nyan"
 # overwrite for Mac
 if [ `uname` = "Darwin" ]; then
     ZSH_THEME="clean"
-    PLUGINS="$PLUGINS osx"
+    PLUGINS="$PLUGINS osx brew"
 fi
-
 plugins=($PLUGINS)
-ZSH_THEME="cloud"
-ZSH_THEME="robbyrussell"
-ZSH_THEME="clean"
-ZSH_THEME="pygmalion"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -32,7 +31,7 @@ ZSH_THEME="pygmalion"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
