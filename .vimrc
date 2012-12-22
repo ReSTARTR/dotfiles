@@ -9,7 +9,7 @@ set nopaste
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
 map <F5> :set listchars=""<CR><ESC>
-map <F6> :!inspect_python %<CR>
+map <F6> :TlistToggle<CR>
 
 " remove spaces at line end
 autocmd BufWritePre * :%s/\s\+$//ge
@@ -79,6 +79,16 @@ source ~/dotfiles/.vim/nerdtree.vimrc
 " source ~/dotfiles/.vim/unite.vimrc
 " source ~/dotfiles/.vim/python-virtualenv.vimrc
 source ~/dotfiles/.vim/yankring.vimrc
+
+" taglist
+let Tlist_Show_One_File=1
+let Tlist_Sort_Type='order'
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Use_Left_Window=1
+let Tlist_WinWidth=50
+"let Tlist_Use_Horiz_Window=1
+"let Tlist_WinHeight=10
 
 " Flake8
 let g:flake8_ignore="E501,E128,E124,E221"

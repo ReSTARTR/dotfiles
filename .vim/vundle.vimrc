@@ -14,6 +14,8 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'rainbow_parentheses.vim'
 " Bundle 'Smooth-Scroll'
 Bundle 'YankRing.vim'
+Bundle 'taglist.vim'
+Bundle 'taglist-plus'
 
 " Git
 Bundle 'tpope/vim-fugitive'
