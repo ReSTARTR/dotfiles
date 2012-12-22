@@ -1,16 +1,13 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM="$DOTFILES/.zsh/custom"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-# ZSH_THEME="linuxonly"
-# ZSH_THEME="cloud"
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="clean"
-ZSH_THEME="pygmalion"
+ZSH_THEME="restartr"
 
 PLUGINS="git pip python nyan"
 # overwrite for Mac
