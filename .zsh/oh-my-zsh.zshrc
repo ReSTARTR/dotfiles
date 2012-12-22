@@ -12,7 +12,6 @@ ZSH_THEME="restartr"
 PLUGINS="git pip python nyan"
 # overwrite for Mac
 if [ `uname` = "Darwin" ]; then
-    ZSH_THEME="clean"
     PLUGINS="$PLUGINS osx brew"
 fi
 plugins=($PLUGINS)
