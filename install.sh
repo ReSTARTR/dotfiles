@@ -22,7 +22,8 @@ fi
 if [ ! -d ~/.vim/bundle/vundle ]; then
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
-vim -c BundleInstall
+#vim -c BundleInstall
+vim +BundleInstall +qall
 
 if [ ! -d ~/.oh-my-zsh ]; then
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
