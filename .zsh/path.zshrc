@@ -8,25 +8,15 @@ if [ -f $HOME/bin ]; then
 fi
 
 # Python
-if [ -f /opt/local/pyenv ]; then
-    PYENV_ROOT=/opt/local/pyenv
+if [ -f $HOME/.pyenv ]; then
+    export PYENV_ROOT=$HOME/.pyenv
     PATH=$PYENV_ROOT/bin:$PATH
-elif [ -f $HOME/.pyenv ]; then
-    PYENV_ROOT=$HOME/.pyenv
-    PATH=$PYENV_ROOT/bin:$PATH
+    eval "$($PYENV_ROOT/bin/pyenv init -)"
 fi
 
 # Ruby
-if [ -f /opt/local/rbenv ]; then
-    RBENV_ROOT=/opt/local/rbenv
+if [ -f $HOME/.rbenv ]; then
+    export RBENV_ROOT=$HOME/.rbenv
     PATH=$RBENV_ROOT/bin:$PATH
-elif [ -f $HOME/.rbenv ]; then
-    RBENV_ROOT=$HOME/.rbenv
-    PATH=$RBENV_ROOT/bin:$PATH
-fi
-
-# Go
-if [ -f /opt/local/go ]; then
-    export GOPATH=/usr/local/go
-    PATH=$GOPATH/bin:$PATH
+    eval "$($RBENV_ROOT/bin/rbenv init -)"
 fi
