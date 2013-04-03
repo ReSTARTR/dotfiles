@@ -9,4 +9,5 @@ source $DOTFILES/.zsh/history.zshrc
 
 [ -f $DOTFILES/.zsh/oh-my-zsh.zshrc ] && source $DOTFILES/.zsh/oh-my-zsh.zshrc
 
+source $DOTFILES/.zsh/path.zshrc
 export PATH=$PATH
