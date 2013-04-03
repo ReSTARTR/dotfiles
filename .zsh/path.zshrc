@@ -15,7 +15,11 @@ if [ -f $HOME/.pyenv ]; then
 fi
 
 # Ruby
-if [ -f $HOME/.rbenv ]; then
+if [ -f /usr/local/opt/rbenv ]; then
+    # homebrew
+    export RBENV_ROOT=/usr/local/opt/rbenv
+    eval "$(rbenv init -)"
+elif [ -f $HOME/.rbenv ]; then
     export RBENV_ROOT=$HOME/.rbenv
     PATH=$RBENV_ROOT/bin:$PATH
     eval "$($RBENV_ROOT/bin/rbenv init -)"
