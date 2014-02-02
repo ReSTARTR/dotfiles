@@ -12,7 +12,7 @@ fi
 if [ ! -f ~/.vimrc ]; then
     ln -s ~/dotfiles/.vimrc ~/.vimrc
 fi
-if [ ! -f ~/.gvimrc ]; then
+if [ ! -L ~/.gvimrc ]; then
     ln -s ~/dotfiles/.gvimrc ~/.gvimrc
 fi
 if [ ! -d ~/.vim/bundle ]; then
@@ -28,7 +28,9 @@ fi
 #vim -c BundleInstall
 vim +BundleInstall +qall
 
-git clone git://github.com/zsh-users/zsh-completions.git ~/dotfiles/.zsh/src/zsh-completions
+if [ ! -d ~/dotfiles/.zsh/src/zsh-completions ]; then
+  git clone git://github.com/zsh-users/zsh-completions.git ~/dotfiles/.zsh/src/zsh-completions
+fi
 
 if [ ! -d ~/.oh-my-zsh ]; then
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
