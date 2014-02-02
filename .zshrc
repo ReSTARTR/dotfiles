@@ -12,3 +12,8 @@ source $DOTFILES/.zsh/history.zshrc
 
 source $DOTFILES/.zsh/path.zshrc
 export PATH=$PATH
+
+which ag > /dev/null
+if [ $? -eq 0 ]; then
+  alias grep='ag'
+fi

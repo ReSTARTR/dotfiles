@@ -1,8 +1,5 @@
 #!/bin/sh
 
-if [ ! -f ~/.vimrc ]; then
-    ln -s ~/dotfiles/.zshrc ~/.zshrc
-fi
 if [ ! -f ~/.screenrc ]; then
     ln -s ~/dotfiles/.screenrc ~/.screenrc
 fi
@@ -14,6 +11,12 @@ if [ ! -f ~/.tmux.conf ]; then
 fi
 if [ ! -f ~/.vimrc ]; then
     ln -s ~/dotfiles/.vimrc ~/.vimrc
+fi
+if [ ! -f ~/.gvimrc ]; then
+    ln -s ~/dotfiles/.gvimrc ~/.gvimrc
+fi
+if [ ! -d ~/.vim/bundle ]; then
+    ln -s ~/.dotfiles.vim/colors ~/.vim/colors
 fi
 
 if [ ! -d ~/.vim/bundle ]; then
