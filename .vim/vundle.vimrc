@@ -16,12 +16,18 @@ Bundle 'rainbow_parentheses.vim'
 Bundle 'YankRing.vim'
 Bundle 'taglist.vim'
 Bundle 'taglist-plus'
+Bundle 'AndrewRadev/switch.vim'
+Bundle 'endwise.vim'
+Bundle 'mileszs/ack.vim'
 
 " Git
 Bundle 'tpope/vim-fugitive'
 
 " Python
 Bundle "nvie/vim-flake8"
+
+" Ruby
+Bundle 'scrooloose/syntastic'
 
 filetype plugin on
 filetype plugin indent on     " required!

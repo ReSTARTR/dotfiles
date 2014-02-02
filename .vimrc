@@ -18,8 +18,8 @@ autocmd BufWritePre * :%s/\s\+$//ge
 """ indent
 "------------------------------
 set noautoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set showtabline=2
 
@@ -73,12 +73,19 @@ augroup END
 """ PLUGINS
 "------------------------------
 source ~/dotfiles/.vim/vundle.vimrc
-source ~/dotfiles/.vim/neocomplcache.vimrc
+" source ~/dotfiles/.vim/neocomplcache.vimrc
 source ~/dotfiles/.vim/nerdtree.vimrc
 " source ~/dotfiles/.vim/nerdcommenter.vimrc
 " source ~/dotfiles/.vim/unite.vimrc
 " source ~/dotfiles/.vim/python-virtualenv.vimrc
 source ~/dotfiles/.vim/yankring.vimrc
+
+if !exists('loaded_matchit')
+  runtime macros/matchit.vim
+end
+
+" NORMAL MODE
+nnoremap - :Switch<CR>
 
 " taglist
 let Tlist_Show_One_File=1
