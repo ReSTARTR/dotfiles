@@ -1,4 +1,5 @@
 export DOTFILES=~/dotfiles
+fpath=($DOTFILES/.zsh/src/zsh-completions/src $fpath)
 
 source $DOTFILES/.zsh/basic.zshrc
 source $DOTFILES/.zsh/history.zshrc
