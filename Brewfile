@@ -1,4 +1,5 @@
 # vi: ft=ruby:
+tap phinze/cask
 
 # Command Line Tools
 
@@ -11,10 +12,11 @@ install pstree
 
 # Apps
 
-tap phinze/cask
 install brew-cask
 
 cask install alfred
+cask alfred link
+
 cask install google-japanese-ime
 cask install google-chrome
 cask install evernote
