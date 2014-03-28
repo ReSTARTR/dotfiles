@@ -36,9 +36,12 @@ if [ ! -d ~/.oh-my-zsh ]; then
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
-
 if [ ! -f ~/.zshrc ]; then
     ln -s ~/dotfiles/.zshrc ~/.zshrc
+fi
+
+if [ ! -f ~/.gemrc ]; then
+    ln -s ~/dotfiles/.gemrc ~/.gemrc
 fi
 
 #if [ ! `which flake8` ]; then
