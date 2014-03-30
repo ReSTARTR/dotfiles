@@ -20,5 +20,5 @@ cd dotfiles
 
 ```bash
 cd ~/dotfiles
-HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom" brew bundle
+HOMEBREW_CASK_OPTS="--appdir=/Applications" brew bundle
 ```
