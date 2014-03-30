@@ -29,6 +29,9 @@ Bundle "nvie/vim-flake8"
 " Ruby
 Bundle 'scrooloose/syntastic'
 
+" Go
+Bundle 'fatih/vim-go'
+
 filetype plugin on
 filetype plugin indent on     " required!
 "
