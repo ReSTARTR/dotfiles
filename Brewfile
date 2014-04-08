@@ -1,5 +1,6 @@
 # vi: ft=ruby:
 tap phinze/cask
+tap homebrew/binary
 
 # Command Line Tools
 
@@ -9,6 +10,7 @@ install tmux
 install wget
 install tree
 install pstree
+install packer
 
 # Apps
 
@@ -17,6 +19,7 @@ install brew-cask
 cask install alfred
 cask alfred link
 
+cask install atmonitor
 cask install google-japanese-ime
 cask install google-chrome
 cask install evernote
