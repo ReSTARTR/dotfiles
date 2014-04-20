@@ -1,3 +1,16 @@
+" Tagbar settings
+"
+" ref: https://github.com/majutsushi/tagbar/blob/master/plugin/tagbar.vim
+
+let g:tagbar_autoshowtag    = 1
+let g:tagbar_autopreview    = 0 " pでタグバー内にフォーカスしたまま移動。Pでプレビューウインドウに表示。
+let g:tagbar_hide_nonpublic = 0 " vでprivateをトグル
+let g:tagbar_left           = 0 " 0:right 1:left
+let g:tagbar_width          = 60 " default=40
+
+" g:tagbar_type_<typename>に特殊な定義を記述
+" ref: https://github.com/majutsushi/tagbar/wiki
+"
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -25,3 +38,13 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
+
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+\ }
+

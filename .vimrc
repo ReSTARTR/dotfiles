@@ -2,6 +2,7 @@
 """ basic
 "------------------------------
 let mapleader = ";"
+set verbose=0
 
 set list
 set number
@@ -10,7 +11,6 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
 map <F5> :set listchars=""<CR><ESC>
 nmap <F6> :TagbarToggle<CR>
-au! BufNewFile,BufRead * execute ":TagbarOpen"
 
 " remove spaces at line end
 au BufWritePre * :%s/\s\+$//ge
@@ -63,10 +63,9 @@ endif
 """ Language
 "------------------------------
 syntax enable
-augroup filetypedetect
-    au! BufNewFile,BufRead *.txt setfiletype text
-    au! BufNewFile,BufRead *.go  setfiletype go
-augroup END
+au BufNewFile,BufRead *.txt setfiletype text
+au BufNewFile,BufRead *.md,*.markdown setfiletype markdown
+au BufNewFile,BufRead *.go set noexpandtab tabstop=8
 
 "------------------------------
 """ Completion
@@ -102,9 +101,9 @@ endif
 
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
-if expand("%") =~ ".*\.go"
-  set noexpandtab
-  set tabstop=4
-  set shiftwidth=4
-endif
+"if expand("%") =~ ".*\.go"
+"  set noexpandtab
+"  set tabstop=4
+"  set shiftwidth=4
+"endif
 

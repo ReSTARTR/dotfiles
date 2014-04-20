@@ -10,9 +10,15 @@ source $DOTFILES/.zsh/history.zshrc
 
 [ -f $DOTFILES/.zsh/oh-my-zsh.zshrc ] && source $DOTFILES/.zsh/oh-my-zsh.zshrc
 
-source $DOTFILES/.zsh/path.zshrc
-export PATH=$PATH
+which go >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+  GO_BIN_PATH=`which go`
+  [ "$GOROOT" = "" ] && export GOROOT=${GO_BIN_PATH%/*}
+  [ "$GOPATH" = "" ] && export GOPATH=$HOME/.go
+fi
 
+source $DOTFILES/.zsh/path.zshrc
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 which ag > /dev/null
 if [ $? -eq 0 ]; then
   alias grep='ag'

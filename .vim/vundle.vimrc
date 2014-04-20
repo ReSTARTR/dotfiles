@@ -12,10 +12,7 @@ Bundle "neocomplcache"
 Bundle "scrooloose/nerdtree"
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'rainbow_parentheses.vim'
-" Bundle 'Smooth-Scroll'
 Bundle 'YankRing.vim'
-" Bundle 'taglist.vim'
-" Bundle 'taglist-plus'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'endwise.vim'
 Bundle 'mileszs/ack.vim'
