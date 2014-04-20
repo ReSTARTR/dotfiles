@@ -10,7 +10,7 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
 map <F5> :set listchars=""<CR><ESC>
 nmap <F6> :TagbarToggle<CR>
-autocmd! BufEnter * execute ":TagbarOpen"
+autocmd! BufNewFile,BufRead * execute ":TagbarOpen"
 
 " remove spaces at line end
 autocmd BufWritePre * :%s/\s\+$//ge
@@ -64,11 +64,14 @@ endif
 "------------------------------
 syntax enable
 augroup filetypedetect
-    " Detect .txt as 'text'
-    autocmd! BufNewFile,BufRead *.py  setfiletype python
     autocmd! BufNewFile,BufRead *.txt setfiletype text
     autocmd! BufNewFile,BufRead *.go  setfiletype go
 augroup END
+
+"------------------------------
+""" Completion
+"------------------------------
+set completeopt=menu,menuone,preview
 
 "------------------------------
 """ PLUGINS
@@ -100,7 +103,6 @@ endif
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 if expand("%") =~ ".*\.go"
-  set completeopt=menu,preview
   set noexpandtab
   set tabstop=4
   set shiftwidth=4
