@@ -9,7 +9,8 @@ set nopaste
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
 map <F5> :set listchars=""<CR><ESC>
-map <F6> :TlistToggle<CR>
+nmap <F6> :TagbarToggle<CR>
+autocmd! BufEnter * execute ":TagbarOpen"
 
 " remove spaces at line end
 autocmd BufWritePre * :%s/\s\+$//ge
@@ -66,8 +67,8 @@ augroup filetypedetect
     " Detect .txt as 'text'
     autocmd! BufNewFile,BufRead *.py  setfiletype python
     autocmd! BufNewFile,BufRead *.txt setfiletype text
+    autocmd! BufNewFile,BufRead *.go  setfiletype go
 augroup END
-
 
 "------------------------------
 """ PLUGINS
@@ -79,6 +80,7 @@ source ~/dotfiles/.vim/nerdtree.vimrc
 " source ~/dotfiles/.vim/unite.vimrc
 " source ~/dotfiles/.vim/python-virtualenv.vimrc
 source ~/dotfiles/.vim/yankring.vimrc
+source ~/dotfiles/.vim/tagbar.vimrc
 
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
@@ -87,15 +89,20 @@ end
 " NORMAL MODE
 nnoremap - :Switch<CR>
 
-" taglist
-let Tlist_Show_One_File=1
-let Tlist_Sort_Type='order'
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_File_Fold_Auto_Close=1
-let Tlist_Use_Left_Window=1
-let Tlist_WinWidth=50
-"let Tlist_Use_Horiz_Window=1
-"let Tlist_WinHeight=10
-
 " Flake8
 let g:flake8_ignore="E501,E128,E124,E221"
+
+" Go
+if $GOROOT != ''
+  set rtp+=$GOROOT/misc/vim
+endif
+
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+
+if expand("%") =~ ".*\.go"
+  set completeopt=menu,preview
+  set noexpandtab
+  set tabstop=4
+  set shiftwidth=4
+endif
+

@@ -14,11 +14,12 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'rainbow_parentheses.vim'
 " Bundle 'Smooth-Scroll'
 Bundle 'YankRing.vim'
-Bundle 'taglist.vim'
-Bundle 'taglist-plus'
+" Bundle 'taglist.vim'
+" Bundle 'taglist-plus'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'endwise.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'majutsushi/tagbar'
 
 " Git
 Bundle 'tpope/vim-fugitive'
@@ -30,7 +31,7 @@ Bundle "nvie/vim-flake8"
 Bundle 'scrooloose/syntastic'
 
 " Go
-Bundle 'fatih/vim-go'
+"Bundle 'fatih/vim-go'
 
 filetype plugin on
 filetype plugin indent on     " required!
