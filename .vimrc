@@ -10,10 +10,10 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
 map <F5> :set listchars=""<CR><ESC>
 nmap <F6> :TagbarToggle<CR>
-autocmd! BufNewFile,BufRead * execute ":TagbarOpen"
+au! BufNewFile,BufRead * execute ":TagbarOpen"
 
 " remove spaces at line end
-autocmd BufWritePre * :%s/\s\+$//ge
+au BufWritePre * :%s/\s\+$//ge
 
 "------------------------------
 """ indent
@@ -41,11 +41,11 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 highlight CursorLine ctermbg=black guibg=black
 highlight CursorColumn ctermbg=black guibg=black
 augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorcolumn nocursorline
-  autocmd WinEnter,BufRead * set cursorcolumn cursorline
-  "autocmd WinLeave * set nocursorline
-  "autocmd WinEnter,BufRead * set cursorline
+  au! cch
+  au WinLeave * set nocursorcolumn nocursorline
+  au WinEnter,BufRead * set cursorcolumn cursorline
+  "au WinLeave * set nocursorline
+  "au WinEnter,BufRead * set cursorline
 augroup END
 
 "------------------------------
@@ -64,8 +64,8 @@ endif
 "------------------------------
 syntax enable
 augroup filetypedetect
-    autocmd! BufNewFile,BufRead *.txt setfiletype text
-    autocmd! BufNewFile,BufRead *.go  setfiletype go
+    au! BufNewFile,BufRead *.txt setfiletype text
+    au! BufNewFile,BufRead *.go  setfiletype go
 augroup END
 
 "------------------------------
