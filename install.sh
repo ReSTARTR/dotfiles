@@ -16,7 +16,7 @@ fi
 if [ ! -d $HOME/.vim/bundle/vundle ]; then
   git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 fi
-#vim +BundleInstall +qall
+vim +BundleInstall +qall
 
 # zsh
 if [ ! -d $DOTFILES/.zsh/src/zsh-completions ]; then
