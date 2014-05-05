@@ -10,4 +10,5 @@ if [ -f $DOTFILES/.zsh/oh-my-zsh.zshrc ]; then
   source $DOTFILES/.zsh/oh-my-zsh.zshrc
 fi
 
-#source $DOTFILES/.zsh/path.zshrc
+export GOROOT="$(cd "$(dirname "$(which go)" )"/.. ; pwd )"
+export GOPATH=$HOME/dev

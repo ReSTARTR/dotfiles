@@ -40,8 +40,9 @@ map  <C-t><C-p> :tabp<CR>
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-highlight CursorLine ctermbg=black guibg=black
-highlight CursorColumn ctermbg=black guibg=black
+highlight CursorLine ctermbg=16 guibg=black
+highlight CursorColumn ctermbg=16 guibg=black
+highlight LineNr ctermfg=16
 augroup cch
   au! cch
   au WinLeave * set nocursorcolumn nocursorline
@@ -53,13 +54,8 @@ augroup END
 "------------------------------
 """ statusline
 "------------------------------
-" set ruler
-" set laststatus=2
-" " statusline color normal/insert mode
-" if version >= 700
-"   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-"   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-" endif
+set ruler
+set laststatus=2
 
 "------------------------------
 """ Language
@@ -67,7 +63,7 @@ augroup END
 syntax enable
 au BufNewFile,BufRead *.txt setfiletype text
 au BufNewFile,BufRead *.md,*.markdown setfiletype markdown
-au BufNewFile,BufRead *.go set noexpandtab tabstop=8
+au BufNewFile,BufRead *.go set noexpandtab tabstop=8 filetype=go
 
 "------------------------------
 """ Completion
@@ -80,6 +76,7 @@ set completeopt=menu,menuone,preview
 
 " source $DOTFILES/.vim/vundle.vimrc
 source $DOTFILES/.vim/neobundle.vimrc
+colorscheme landscape
 
 " source $DOTFILES/.vim/neocomplcache.vimrc
 source $DOTFILES/.vim/nerdtree.vimrc
@@ -105,9 +102,3 @@ if $GOROOT != ''
 endif
 
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-
-"if expand("%") =~ ".*\.go"
-"  set noexpandtab
-"  set tabstop=4
-"  set shiftwidth=4
-"endif

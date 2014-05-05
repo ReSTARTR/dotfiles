@@ -3,13 +3,20 @@ DOTFILES="$( cd "$(dirname "$0")" ; pwd -P )"
 
 [ ! -L ~/.screenrc   ] && ln -s $DOTFILES/.screenrc  ~/.screenrc
 [ ! -L ~/.gitconfig  ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
-[ ! -L ~/.tmux.conf  ] && ln -s $DOTFILES/.tmux.conf ~/.tmux.conf
 [ ! -L ~/.gemrc      ] && ln -s $DOTFILES/.gemrc     ~/.gemrc
+
+# TMUX
+if [ ! -L ~/.tmux.conf ]; then
+  ln -s $DOTFILES/.tmux.conf ~/.tmux.conf
+fi
+if [ ! -d $DOTFILES/.tmux/src/tmux-powerline ]; then
+  git clone https://github.com/erikw/tmux-powerline.git $DOTFILES/.tmux/src/tmux-powerline
+fi
 
 # vim
 [ ! -L ~/.vimrc      ] && ln -s $DOTFILES/.vimrc ~/.vimrc
 [ ! -L ~/.gvimrc     ] && ln -s $DOTFILES/.gvimrc ~/.gvimrc
-[ ! -L ~/.vim/bundle ] && ln -s $DOTFILES/.dotfiles.vim/colors ~/.vim/colors
+[ ! -L ~/.vim/colors ] && ln -s $DOTFILES/.dotfiles.vim/colors ~/.vim/colors
 if [ ! -d $HOME/.vim/bundle ]; then
   mkdir -p $HOME/.vim/bundle
 fi
