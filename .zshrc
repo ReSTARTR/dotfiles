@@ -1,4 +1,4 @@
-ZSHRC="$(readlink $zshrc)"
+ZSHRC="$(readlink $HOME/.zshrc)"
 export DOTFILES="$( cd "$(dirname "$ZSHRC")"; pwd -P)"
 
 fpath=($DOTFILES/.zsh/src/zsh-completions/src $fpath)
