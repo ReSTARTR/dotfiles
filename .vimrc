@@ -75,14 +75,14 @@ set completeopt=menu,menuone,preview
 "------------------------------
 """ PLUGINS
 "------------------------------
-source ~/dotfiles/.vim/vundle.vimrc
-" source ~/dotfiles/.vim/neocomplcache.vimrc
-source ~/dotfiles/.vim/nerdtree.vimrc
-" source ~/dotfiles/.vim/nerdcommenter.vimrc
-" source ~/dotfiles/.vim/unite.vimrc
-" source ~/dotfiles/.vim/python-virtualenv.vimrc
-source ~/dotfiles/.vim/yankring.vimrc
-source ~/dotfiles/.vim/tagbar.vimrc
+source $DOTFILES/.vim/vundle.vimrc
+" source $DOTFILES/.vim/neocomplcache.vimrc
+source $DOTFILES/.vim/nerdtree.vimrc
+" source $DOTFILES/.vim/nerdcommenter.vimrc
+" source $DOTFILES/.vim/unite.vimrc
+" source $DOTFILES/.vim/python-virtualenv.vimrc
+source $DOTFILES/.vim/yankring.vimrc
+source $DOTFILES/.vim/tagbar.vimrc
 
 if !exists('loaded_matchit')
   runtime macros/matchit.vim

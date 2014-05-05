@@ -24,3 +24,11 @@ elif [ -d $HOME/.rbenv ]; then
     PATH=$RBENV_ROOT/bin:$PATH
     eval "$($RBENV_ROOT/bin/rbenv init -)"
 fi
+
+# Go
+which go >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+  [ "$GOROOT" = "" ] && export GOROOT=${GO_BIN_PATH%/*}
+  [ "$GOPATH" = "" ] && export GOPATH=$DEVPATH/src
+  export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+fi
