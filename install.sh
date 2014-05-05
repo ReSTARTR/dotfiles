@@ -16,11 +16,11 @@ fi
 # vim
 [ ! -L ~/.vimrc      ] && ln -s $DOTFILES/.vimrc ~/.vimrc
 [ ! -L ~/.gvimrc     ] && ln -s $DOTFILES/.gvimrc ~/.gvimrc
-[ ! -L ~/.vim/colors ] && ln -s $DOTFILES/.dotfiles.vim/colors ~/.vim/colors
+[ ! -L ~/.vim/colors ] && ln -s $DOTFILES/.vim/colors ~/.vim/colors
 if [ ! -d $HOME/.vim/bundle ]; then
   mkdir -p $HOME/.vim/bundle
 fi
-if [ ! -d $HOME/.vim/bundle/vundle ]; then
+if [ ! -d $HOME/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 fi
 vim +NeoBundleInstall +qall

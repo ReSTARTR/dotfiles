@@ -76,7 +76,6 @@ set completeopt=menu,menuone,preview
 
 " source $DOTFILES/.vim/vundle.vimrc
 source $DOTFILES/.vim/neobundle.vimrc
-colorscheme landscape
 
 " source $DOTFILES/.vim/neocomplcache.vimrc
 source $DOTFILES/.vim/nerdtree.vimrc
@@ -102,3 +101,6 @@ if $GOROOT != ''
 endif
 
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+
+colorscheme landscape
+set t_Co=256
