@@ -1,8 +1,6 @@
-self=${0:a}
-if [ -L $self ]; then
-  self=$(readlink $self)
-fi
-export DOTFILES=$(dirname ${self:0})
+ZSHRC="$(readlink $zshrc)"
+export DOTFILES="$( cd "$(dirname "$ZSHRC")"; pwd -P)"
+
 fpath=($DOTFILES/.zsh/src/zsh-completions/src $fpath)
 
 source $DOTFILES/.zsh/basic.zshrc
