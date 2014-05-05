@@ -14,9 +14,9 @@ if [ ! -d $HOME/.vim/bundle ]; then
   mkdir -p $HOME/.vim/bundle
 fi
 if [ ! -d $HOME/.vim/bundle/vundle ]; then
-  git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+  git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 fi
-vim +BundleInstall +qall
+vim +NeoBundleInstall +qall
 
 # zsh
 if [ ! -d $DOTFILES/.zsh/src/zsh-completions ]; then

@@ -1,8 +1,10 @@
 "------------------------------
 """ basic
 "------------------------------
+scriptencoding utf-8
 let mapleader = ";"
 set verbose=0
+set encoding=utf-8
 
 set list
 set number
@@ -51,13 +53,13 @@ augroup END
 "------------------------------
 """ statusline
 "------------------------------
-set ruler
-set laststatus=2
-" statusline color normal/insert mode
-if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-endif
+" set ruler
+" set laststatus=2
+" " statusline color normal/insert mode
+" if version >= 700
+"   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+"   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+" endif
 
 "------------------------------
 """ Language
@@ -75,7 +77,10 @@ set completeopt=menu,menuone,preview
 "------------------------------
 """ PLUGINS
 "------------------------------
-source $DOTFILES/.vim/vundle.vimrc
+
+" source $DOTFILES/.vim/vundle.vimrc
+source $DOTFILES/.vim/neobundle.vimrc
+
 " source $DOTFILES/.vim/neocomplcache.vimrc
 source $DOTFILES/.vim/nerdtree.vimrc
 " source $DOTFILES/.vim/nerdcommenter.vimrc
@@ -106,4 +111,3 @@ exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 "  set tabstop=4
 "  set shiftwidth=4
 "endif
-

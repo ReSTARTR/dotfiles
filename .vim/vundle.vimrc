@@ -17,6 +17,7 @@ Bundle 'AndrewRadev/switch.vim'
 Bundle 'endwise.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline'
 
 " Git
 Bundle 'tpope/vim-fugitive'
