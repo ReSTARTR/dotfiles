@@ -1,3 +1,4 @@
+export TERM=xterm-256color
 ZSHRC="$(readlink $HOME/.zshrc)"
 export DOTFILES="$( cd "$(dirname "$ZSHRC")"; pwd -P)"
 
