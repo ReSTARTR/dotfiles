@@ -1,0 +1,26 @@
+[global_config]
+[keybindings]
+  next_tab = <Primary><Shift>Right
+  prev_tab = <Primary><Shift>Left
+[profiles]
+  [[default]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    font = Ricty Diminished 12
+    visible_bell = True
+    background_image = None
+    background_darkness = 0.92
+    use_system_font = False
+    foreground_color = "#e6e6e6"
+    show_titlebar = False
+    copy_on_selection = True
+    background_color = "#2c3640"
+    allow_bold = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
