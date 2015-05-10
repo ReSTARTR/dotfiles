@@ -63,6 +63,7 @@ set laststatus=2
 syntax enable
 au BufNewFile,BufRead *.txt setfiletype text
 au BufNewFile,BufRead *.md,*.markdown setfiletype markdown
+au BufNewFile,BufRead *.ex,*exs  setfiletype=elixir
 au BufNewFile,BufRead *.go set noexpandtab tabstop=8 filetype=go
 
 "------------------------------

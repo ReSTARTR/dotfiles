@@ -24,6 +24,9 @@ if [ ! -d $HOME/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 fi
 vim +NeoBundleInstall +qall
+if [ -f $HOME/.ctags ]; then
+  wget https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -O $HOME/.ctags
+fi
 
 # zsh
 if [ ! -d $DOTFILES/.zsh/src/zsh-completions ]; then

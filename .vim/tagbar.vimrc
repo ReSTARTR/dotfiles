@@ -48,3 +48,33 @@ let g:tagbar_type_markdown = {
     \ ]
 \ }
 
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'Elixir',
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'f:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'p:protocols',
+        \ 'r:records',
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 'a' : 'macros',
+        \ 'm' : 'modules',
+        \ 'i' : 'implementations',
+        \ 'p' : 'protocols'
+    \ },
+    \ 'scope2kind' : {
+        \ 'macros'          : 'a',
+        \ 'modules'         : 'm',
+        \ 'implementations' : 'i',
+        \ 'protocols'       : 'p'
+    \ },
+    \ 'ctagsbin'  : '/usr/local/bin/ctags',
+\ }
+"

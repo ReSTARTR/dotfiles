@@ -28,6 +28,8 @@ NeoBundle 'itchyny/lightline.vim'
         \ }
 " Git
 NeoBundle 'tpope/vim-fugitive'
+" Elixir
+NeoBundle 'elixir-lang/vim-elixir'
 " Python
 NeoBundle "nvie/vim-flake8"
 " Ruby
