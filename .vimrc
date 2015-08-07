@@ -9,8 +9,10 @@ set encoding=utf-8
 set list
 set number
 set nopaste
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+"map <F4> :set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%<CR><Esc>
+map <F4> :set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%<CR><Esc>
 map <F5> :set listchars=""<CR><ESC>
 nmap <F6> :TagbarToggle<CR>
 
@@ -40,15 +42,15 @@ map  <C-t><C-p> :tabp<CR>
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-highlight CursorLine ctermbg=16 guibg=black
-highlight CursorColumn ctermbg=16 guibg=black
-highlight LineNr ctermfg=16
+"highlight CursorLine ctermbg=1 guibg=red
+"highlight CursorColumn ctermbg=16 guibg=black
+"highlight LineNr ctermfg=16
 augroup cch
   au! cch
-  au WinLeave * set nocursorcolumn nocursorline
-  au WinEnter,BufRead * set cursorcolumn cursorline
-  "au WinLeave * set nocursorline
-  "au WinEnter,BufRead * set cursorline
+  "au WinLeave * set nocursorcolumn nocursorline
+  "au WinEnter,BufRead * set cursorcolumn cursorline
+  au WinLeave * set nocursorline
+  au WinEnter,BufRead * set cursorline
 augroup END
 
 "------------------------------
@@ -63,8 +65,9 @@ set laststatus=2
 syntax enable
 au BufNewFile,BufRead *.txt setfiletype text
 au BufNewFile,BufRead *.md,*.markdown setfiletype markdown
-au BufNewFile,BufRead *.ex,*exs  setfiletype=elixir
+au BufNewFile,BufRead *.ex,*exs  setfiletype elixir
 au BufNewFile,BufRead *.go set noexpandtab tabstop=8 filetype=go
+au BufNewFile,BufRead Gemfile,Capfile setfiletype ruby
 
 "------------------------------
 """ Completion
@@ -105,3 +108,11 @@ exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 colorscheme landscape
 set t_Co=256
+
+
+" CtrlP
+let g:ctrlp_map = '<C-p>'
+map  <C-p> :CtrlP<CR>
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_max_height = 20

@@ -5,14 +5,11 @@ if has('vim_starting')
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 " Bundles
-NeoBundle 'gmarik/vundle'
-NeoBundle "unite.vim"
-NeoBundle "neocomplcache"
+NeoBundle 'ctrlp.vim'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundle "scrooloose/nerdtree"
 NeoBundle 'rainbow_parentheses.vim'
-NeoBundle 'YankRing.vim'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'endwise.vim'
 NeoBundle 'mileszs/ack.vim'
@@ -35,7 +32,7 @@ NeoBundle "nvie/vim-flake8"
 " Ruby
 NeoBundle 'scrooloose/syntastic'
 " Go
-"NeoBundle 'fatih/vim-go'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 
