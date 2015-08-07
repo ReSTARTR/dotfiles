@@ -16,12 +16,12 @@ function cdup() {
   cd ..
   zle reset-prompt
 }
-zle -N cdup
-bindkey '\^' cdup        # cd ..
-alias pd="popd"          # move previous directory
-setopt AUTO_PUSHD        # pushd
-setopt PUSHD_IGNORE_DUPS # pushd
-function cd() {builtin cd $@ && ls -v -F --color=auto}
+# zle -N cdup
+# bindkey '\^' cdup        # cd ..
+# alias pd="popd"          # move previous directory
+# setopt AUTO_PUSHD        # pushd
+# setopt PUSHD_IGNORE_DUPS # pushd
+# function cd() {builtin cd $@ && ls -v -F --color=auto}
 
 # completion
 autoload -U compinit
