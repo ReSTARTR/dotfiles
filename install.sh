@@ -1,7 +1,6 @@
 #!/bin/sh
 DOTFILES="$( cd "$(dirname "$0")" ; pwd -P )"
 
-[ ! -L ~/.screenrc   ] && ln -s $DOTFILES/.screenrc  ~/.screenrc
 [ ! -L ~/.gitconfig  ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
 [ ! -L ~/.gemrc      ] && ln -s $DOTFILES/.gemrc     ~/.gemrc
 
@@ -24,7 +23,7 @@ if [ ! -d $HOME/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
 fi
 vim +NeoBundleInstall +qall
-if [ -f $HOME/.ctags ]; then
+if [ ! -f $HOME/.ctags ]; then
   wget https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -O $HOME/.ctags
 fi
 
