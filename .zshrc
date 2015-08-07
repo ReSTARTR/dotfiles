@@ -1,4 +1,9 @@
 export TERM=xterm-256color
+
+# ls color
+export LSCOLORS=${LSCOLORS:-gxfxcxdxbxegedabagacad} # mac/bsd
+export LS_COLORS=${LS_COLORS:-di=01;36} # lynux
+
 ZSHRC="$(readlink $HOME/.zshrc)"
 export DOTFILES="$( cd "$(dirname "$ZSHRC")"; pwd -P)"
 
