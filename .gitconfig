@@ -12,31 +12,24 @@
     sslVerify = false
 
 [alias]
-    co = checkout
-    ci = commit
-    st = status
-    ft = fetch
-    # branch
-    br = branch
-#    bm  = branch --merged
-#    bn  = branch --no-merged
-    # diff
-    df = diff
-    dfc = diff --cached
-    dfw = diff --color-words
+    co   = checkout
+    ci   = commit
+    st   = status --short
+    ft   = fetch
+    br   = branch
+    df   = diff
+    dfc  = diff --cached
+    dfw  = diff --color-words
     dfwc = diff --color-words --cached
-    # log
-    l  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20
-    lg  = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20 --graph
-#    wc  = watchanged
-#    ls  = log --stat
-#    lp  = log -p
-#    la  = log --pretty=\"format:%ad %h (%an): %s\" --date=short
-#    lr  = log origin
-#    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
-#    log-all   = log --graph --all --color --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+    l    = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20
+    lg   = log --pretty=format:\"%h %ar\t(%an)\t: %s\" --date=short -20 --graph
+
 [branch "master"]
-    merge = refs/heads/master
+    merge  = refs/heads/master
     remote = origin
+
 [merge]
     tool = origin
+
+[ghq]
+    root = ~/src
