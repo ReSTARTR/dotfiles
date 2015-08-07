@@ -10,6 +10,7 @@ source $DOTFILES/.zsh/history.zshrc
 if [ -f $DOTFILES/.zsh/oh-my-zsh.zshrc ]; then
   source $DOTFILES/.zsh/oh-my-zsh.zshrc
 fi
+source $DOTFILES/.zsh/peco.zshrc
 
 GOBIN=$(which go 2>&1)
 if [ -z $0 ]; then
