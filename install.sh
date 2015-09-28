@@ -32,14 +32,12 @@ if [ ! -d $DOTFILES/.tmux/src/tmux-powerline ]; then
 fi
 
 # vim
+[ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
 [ ! -L ~/.vimrc      ] && ln -s $DOTFILES/.vimrc ~/.vimrc
 [ ! -L ~/.gvimrc     ] && ln -s $DOTFILES/.gvimrc ~/.gvimrc
 [ ! -L ~/.vim/colors ] && ln -s $DOTFILES/.vim/colors ~/.vim/colors
-if [ ! -d $HOME/.vim/bundle ]; then
-  mkdir -p $HOME/.vim/bundle
-fi
-if [ ! -d $HOME/.vim/bundle/neobundle.vim ]; then
-  git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 vim +NeoBundleInstall +qall
 if [ ! -f $HOME/.ctags ]; then
