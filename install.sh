@@ -1,5 +1,24 @@
 #!/bin/sh
-DOTFILES="$( cd "$(dirname "$0")" ; pwd -P )"
+export DOTFILES=$HOME/dotfiles
+
+# Check requirements
+_REQUIREMENTS="zsh vim git"
+for cmd in $_REQUIREMENTS; do
+  type $cmd 2> /dev/null 1>/dev/null
+  if [ $? -ne 0 ]; then
+     echo "$cmd must be installed"; exit
+  fi
+done
+
+# Check current shell
+# ref: http://tkuchiki.hatenablog.com/entry/2014/05/08/222135
+_PID=$$
+_PPID=$(ps -o ppid -p $_PID | tail -n 1);
+if ps -p $_PPID | grep -qa zsh; then
+  true
+else
+  echo "You must change loginshell to zsh"; exit
+fi
 
 [ ! -L ~/.gitconfig  ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
 [ ! -L ~/.gemrc      ] && ln -s $DOTFILES/.gemrc     ~/.gemrc
