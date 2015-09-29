@@ -26,9 +26,9 @@ elif [ -d $HOME/.rbenv ]; then
 fi
 
 # Go
-which go >/dev/null 2>&1
-if [ $? -eq 0 ]; then
-  [ "$GOROOT" = "" ] && export GOROOT=${GO_BIN_PATH%/*}
-  [ "$GOPATH" = "" ] && export GOPATH=$DEVPATH/src
+GOBIN=$(which go 2>&1)
+if [ -z $0 ]; then
+  export GOROOT="$(cd "$(dirname "$(which go)" )"/.. ; pwd )"
+  export GOPATH=$HOME
   export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 fi

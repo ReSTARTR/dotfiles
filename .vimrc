@@ -103,8 +103,11 @@ let g:flake8_ignore="E501,E128,E124,E221"
 if $GOROOT != ''
   set rtp+=$GOROOT/misc/vim
 endif
-
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+if $GOPATH != ''
+  exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+  exe "set rtp+=".globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
+  let g:syntastic_go_checkers = ['go', 'golint']
+endif
 
 colorscheme landscape
 set t_Co=256
