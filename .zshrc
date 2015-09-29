@@ -11,6 +11,7 @@ fpath=($DOTFILES/.zsh/src/zsh-completions/src $fpath)
 
 source $DOTFILES/.zsh/basic.zshrc
 source $DOTFILES/.zsh/history.zshrc
+source $DOTFILES/.zsh/path.zshrc
 
 if [ -f $DOTFILES/.zsh/oh-my-zsh.zshrc ]; then
   source $DOTFILES/.zsh/oh-my-zsh.zshrc
