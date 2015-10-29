@@ -49,6 +49,7 @@ if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then
   git clone https://github.com/olivierverdier/zsh-git-prompt.git $DOTFILES/.zsh/src/zsh-git-prompt
 fi
 if [ ! -d $DOTFILES/.zsh/src/zsh-git-completion ]; then
+  mkdir -p $DOTFILES/.zsh/completion
   wget -q https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -O $DOTFILES/.zsh/src/zsh-git-completion.bash
   wget -q https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -O $DOTFILES/.zsh/completion/_git
 fi
