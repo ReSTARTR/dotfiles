@@ -45,11 +45,13 @@ if [ ! -f $HOME/.ctags ]; then
 fi
 
 # zsh
-if [ ! -d $DOTFILES/.zsh/src/zsh-completions ]; then
-  git clone git://github.com/zsh-users/zsh-completions.git $DOTFILES/.zsh/src/zsh-completions
+if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then
+  git clone https://github.com/olivierverdier/zsh-git-prompt.git $DOTFILES/.zsh/src/zsh-git-prompt
 fi
-if [ ! -d $DOTFILES/.zsh/src/oh-my-zsh ]; then
-    git clone git://github.com/robbyrussell/oh-my-zsh.git $DOTFILES/.zsh/src/oh-my-zsh
+if [ ! -d $DOTFILES/.zsh/src/zsh-git-completion ]; then
+  mkdir -p $DOTFILES/.zsh/completion
+  wget -q https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -O $DOTFILES/.zsh/src/zsh-git-completion.bash
+  wget -q https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -O $DOTFILES/.zsh/completion/_git
 fi
 if [ ! -L ~/.zshrc ]; then
     ln -s $DOTFILES/.zshrc ~/.zshrc
