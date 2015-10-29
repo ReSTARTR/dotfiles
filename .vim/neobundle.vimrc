@@ -14,6 +14,7 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'endwise.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'ctags.vim'
 NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'itchyny/lightline.vim'
   let g:lightline = {
