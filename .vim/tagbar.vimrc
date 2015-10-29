@@ -7,6 +7,7 @@ let g:tagbar_autopreview    = 0 " pでタグバー内にフォーカスしたま
 let g:tagbar_hide_nonpublic = 0 " vでprivateをトグル
 let g:tagbar_left           = 0 " 0:right 1:left
 let g:tagbar_width          = 60 " default=40
+let g:tagbar_sort           = "Order"
 
 " g:tagbar_type_<typename>に特殊な定義を記述
 " ref: https://github.com/majutsushi/tagbar/wiki
