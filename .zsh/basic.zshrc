@@ -2,6 +2,8 @@
 
 # bindkey
 bindkey -e # emacs mode
+bindkey ^F forward-word
+bindkey ^B backward-word
 
 # color
 autoload colors && colors
