@@ -106,9 +106,9 @@ endif
 if $GOPATH != ''
   exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
   exe "set rtp+=".globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
-  let g:syntastic_go_checkers = ['go', 'golint']
+  let g:syntastic_go_checkers = ['go', 'golint', 'goimports']
 endif
-
+let g:gofmt_command = 'goimports'
 colorscheme landscape
 set t_Co=256
 
