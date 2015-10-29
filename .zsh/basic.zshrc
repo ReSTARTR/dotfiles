@@ -10,7 +10,11 @@ autoload colors && colors
 
 # alias
 alias vi="vim"
-alias ll="ls -l --color=auto"
+if [ "$(uname)" = "Darwin" ]; then
+  alias ll="ls -lG"
+else
+  alias ll="ls -l --color=auto"
+fi
 
 # Directory
 function cdup() {
@@ -27,7 +31,6 @@ function cdup() {
 
 # completion
 autoload -U compinit
-compinit
 setopt AUTO_PARAM_SLASH  # add tail /
 setopt MAGIC_EQUAL_SUBST # complete "--prefx=/path/to"
 setopt AUTO_LIST         # show completions
