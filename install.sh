@@ -35,6 +35,7 @@ fi
 [ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
 [ ! -L ~/.vimrc      ] && ln -s $DOTFILES/.vimrc ~/.vimrc
 [ ! -L ~/.gvimrc     ] && ln -s $DOTFILES/.gvimrc ~/.gvimrc
+[ ! -L ~/.vim        ] && ln -s $DOTFILES/.vim ~/.vim
 [ ! -L ~/.vim/colors ] && ln -s $DOTFILES/.vim/colors ~/.vim/colors
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
