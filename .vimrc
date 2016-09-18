@@ -79,7 +79,8 @@ set completeopt=menu,menuone,preview
 "------------------------------
 
 " source $DOTFILES/.vim/vundle.vimrc
-source $DOTFILES/.vim/neobundle.vimrc
+" source $DOTFILES/.vim/neobundle.vimrc
+source $DOTFILES/.vim/dein.vimrc
 
 " source $DOTFILES/.vim/neocomplcache.vimrc
 source $DOTFILES/.vim/nerdtree.vimrc

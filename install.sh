@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -ex
 export DOTFILES=$HOME/dotfiles
 
 # Check requirements
@@ -33,17 +33,22 @@ fi
 
 # vim
 [ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
-[ ! -L ~/.vimrc      ] && ln -s $DOTFILES/.vimrc ~/.vimrc
-[ ! -L ~/.gvimrc     ] && ln -s $DOTFILES/.gvimrc ~/.gvimrc
-[ ! -L ~/.vim        ] && ln -s $DOTFILES/.vim ~/.vim
-[ ! -L ~/.vim/colors ] && ln -s $DOTFILES/.vim/colors ~/.vim/colors
-if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
-  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+[ ! -L ~/.vimrc      ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
+[ ! -L ~/.gvimrc     ] && ln -sf $DOTFILES/.gvimrc ~/.gvimrc
+[ ! -L ~/.vim        ] && ln -sf $DOTFILES/.vim ~/.vim
+if [ -F /tmp/dein-installer.sh ]; then
+  rm /tmp/dein-installer.sh
 fi
-vim +NeoBundleInstall +qall
+curl -s https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
+sh /tmp/dein-installer.sh ~/.vim/bundle/dein.vim
+vim +'call dein#install()' +qall
 if [ ! -f $HOME/.ctags ]; then
   wget https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -O $HOME/.ctags
 fi
+# neovim
+[ ! -d ~/.config ] && mkdir ~/.config
+[ ! -F ~/.config/nvim ] && ln -sf ~/.config/nvim ~/.vim
+[ ! -F ~/.config/nvim/init.vim ] && ln -sf ~/.config/nvim/init.vim ~/.vimrc
 
 # zsh
 if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then

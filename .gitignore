@@ -1,2 +1,5 @@
 .zsh/src
 .zsh/completion
+.vim/bundle
+.vim/init.vim
+.tmux
