@@ -32,18 +32,18 @@ if [ ! -d $DOTFILES/.tmux/src/tmux-powerline ]; then
 fi
 
 # vim
-[ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
+[ ! -L ~/.vim        ] && ln -sf $DOTFILES/.vim ~/.vim
 [ ! -L ~/.vimrc      ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
 [ ! -L ~/.gvimrc     ] && ln -sf $DOTFILES/.gvimrc ~/.gvimrc
-[ ! -L ~/.vim        ] && ln -sf $DOTFILES/.vim ~/.vim
+[ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
 if [ -F /tmp/dein-installer.sh ]; then
   rm /tmp/dein-installer.sh
 fi
-curl -s https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
+wget -q https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -O /tmp/dein-installer.sh
 sh /tmp/dein-installer.sh ~/.vim/bundle/dein.vim
 vim +'call dein#install()' +qall
 if [ ! -f $HOME/.ctags ]; then
-  wget https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -O $HOME/.ctags
+  wget -q https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -O $HOME/.ctags
 fi
 # neovim
 [ ! -d ~/.config ] && mkdir ~/.config
