@@ -14,6 +14,7 @@ LIST=$LIST:peco
 LIST=$LIST:zsh
 LIST=$LIST:tmux
 LIST=$LIST:vim
+LIST=$LIST:watch
 LIST=$LIST:neovim/neovim/neovim
 # etc
 LIST=$LIST:awscli
