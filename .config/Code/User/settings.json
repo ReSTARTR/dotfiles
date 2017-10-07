@@ -1,0 +1,100 @@
+{
+  "window.zoomLevel": 0,
+
+  // workbench
+  "workbench.colorTheme": "Zenburn",
+  "workbench.sideBar.location": "left",
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
+  // Editor
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 30,
+  // "editor.fontFamily": "Ubuntu Mono derivative Powerline, monospace",
+  "editor.fontFamily": "Go Mono, Menlo, monospace",
+  // "editor.fontFamily": "rounded-l-mplus-1mn-regular, Menlo, monospace",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 16,
+  "editor.renderLineHighlight": "line",
+  "editor.renderIndentGuides": false,
+  "editor.renderControlCharacters": true,
+  "editor.folding": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.formatOnSave": true,
+  "editor.rulers": [100, 120],
+
+  // Terminal
+  "terminal.integrated.fontFamily":
+    "Ubuntu Mono derivative Powerline, monospace",
+  // "terminal.integrated.fontFamily": "SourceHanCodeJP-Normal",
+  // "terminal.integrated.fontFamily": "mononoki-Regular", //Nasu M Regular",
+  "terminal.integrated.fontSize": 13,
+
+  // Clock bar
+  "clock.dateFormat": "yyyy-mm-dd HH:MM:ss Z",
+
+  // Project Manager
+  "projectManager.showProjectNameInStatusBar": true,
+
+  // Vim
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-c>": false,
+    // "<C-v>": false,
+    // "<C-x>": false,
+    // "<C-w>": false,
+    "<C-f>": false
+  },
+
+  // Go
+  "go.goroot": "/Users/yoshida/go19",
+  "go.toolsGopath": "${home}/go",
+  "go.formatTool": "goimports",
+  "go.formatFlags": ["--local", "github.com/ReSTARTR"],
+  "go.formatOnSave": true,
+  "go.lintTool": "gometalinter",
+  "go.lintOnSave": "workspace",
+  "go.lintFlags": ["--vendor", "--enable-all", "--fast"],
+  "go.vetFlags": ["-all"],
+  "[go]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+
+  // Python
+  "python.formatting.autopep8Args": ["--in-place"],
+  "python.formatting.formatOnSave": true,
+  "python.linting.pep8Enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.maxNumberOfProblems": 120,
+  "python.formatting.autopep8Path": "yapf",
+  "python.linting.pep8Args": ["--max-line-length=100"],
+  "python.linting.flake8Args": ["--max-line-length=100"],
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+
+  // Javascript
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": false,
+  "typescript.check.npmIsInstalled": false,
+  "[javascript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+
+  // Ruby
+  "ruby.rubocop.executePath": "/home/yoshida/.rbenv/shims/",
+  "[ruby]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  }
+}
