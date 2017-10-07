@@ -32,4 +32,4 @@
     tool = origin
 
 [ghq]
-    root = ~/src
+    root = ~/go/src

@@ -20,14 +20,12 @@ if [ -d /usr/local/opt/rbenv ]; then
     export RBENV_ROOT=/usr/local/opt/rbenv
     eval "$(rbenv init -)"
 elif [ -d $HOME/.rbenv ]; then
-    export RBENV_ROOT=$HOME/.rbenv
-    PATH=$RBENV_ROOT/bin:$PATH
-    eval "$($RBENV_ROOT/bin/rbenv init -)"
+    eval "$(rbenv init -)"
 fi
 
 # Go
-if type go 2>&1 > /dev/null; then
-  export GOROOT=/usr/local/go
-  export GOPATH=$HOME
-  export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-fi
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
+# Node.js
+export PATH=$HOME/node/bin:$PATH
