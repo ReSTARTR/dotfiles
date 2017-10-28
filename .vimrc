@@ -78,17 +78,17 @@ set completeopt=menu,menuone,preview
 """ PLUGINS
 "------------------------------
 
-" source $DOTFILES/.vim/vundle.vimrc
-" source $DOTFILES/.vim/neobundle.vimrc
-source $DOTFILES/.vim/dein.vimrc
+" source ~/.vim/vundle.vimrc
+" source ~/.vim/neobundle.vimrc
+source ~/.vim/dein.vimrc
 
-" source $DOTFILES/.vim/neocomplcache.vimrc
-source $DOTFILES/.vim/nerdtree.vimrc
-" source $DOTFILES/.vim/nerdcommenter.vimrc
-" source $DOTFILES/.vim/unite.vimrc
-" source $DOTFILES/.vim/python-virtualenv.vimrc
-source $DOTFILES/.vim/yankring.vimrc
-source $DOTFILES/.vim/tagbar.vimrc
+" source ~/.vim/neocomplcache.vimrc
+source ~/.vim/nerdtree.vimrc
+" source ~/.vim/nerdcommenter.vimrc
+" source ~/.vim/unite.vimrc
+" source ~/.vim/python-virtualenv.vimrc
+source ~/.vim/yankring.vimrc
+source ~/.vim/tagbar.vimrc
 
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
@@ -101,9 +101,9 @@ nnoremap - :Switch<CR>
 let g:flake8_ignore="E501,E128,E124,E221"
 
 " Go
-source $HOME/.vim/go.vimrc
+source ~/.vim/go.vimrc
 
-colorscheme landscape
+" colorscheme landscape
 set t_Co=256
 
 

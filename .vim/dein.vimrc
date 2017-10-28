@@ -3,48 +3,50 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=~/.vim/bundle/dein.vim/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/yoshida/.vim/bundles/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('~/.vim/bundle/dein.vim')
+if dein#load_state('/home/yoshida/.vim/bundles')
+  call dein#begin('/home/yoshida/.vim/bundles')
 
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
+  " Let dein manage dein
+  " Required:
+  call dein#add('/home/yoshida/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-" Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('vim-scripts/ctrlp.vim')
-call dein#add('vim-scripts/ag.vim')
-call dein#add('junegunn/vim-easy-align')
-call dein#add("scrooloose/nerdtree")
-call dein#add('vim-scripts/rainbow_parentheses.vim')
-call dein#add('AndrewRadev/switch.vim')
-call dein#add('vim-scripts/endwise.vim')
-call dein#add('mileszs/ack.vim')
-call dein#add('majutsushi/tagbar')
-call dein#add('vim-scripts/ctags.vim')
-call dein#add('itchyny/landscape.vim')
-call dein#add('itchyny/lightline.vim')
-let g:lightline = {
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
-call dein#add('tpope/vim-fugitive')
-call dein#add('elixir-lang/vim-elixir', {'on_ft': 'elixir'})
-call dein#add("nvie/vim-flake8",        {'on_ft': 'python'})
-call dein#add('scrooloose/syntastic',   {'on_ft': 'ruby'})
-call dein#add('fatih/vim-go',           {'on_ft': 'go'})
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('vim-scripts/ctrlp.vim')
+  call dein#add('vim-scripts/ag.vim')
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add("scrooloose/nerdtree")
+  call dein#add('vim-scripts/rainbow_parentheses.vim')
+  call dein#add('AndrewRadev/switch.vim')
+  call dein#add('vim-scripts/endwise.vim')
+  call dein#add('mileszs/ack.vim')
+  call dein#add('majutsushi/tagbar')
+  call dein#add('vim-scripts/ctags.vim')
+  call dein#add('itchyny/landscape.vim')
+  call dein#add('itchyny/lightline.vim')
+  let g:lightline = {
+        \ 'component': {
+        \   'readonly': '%{&readonly?"⭤":""}',
+        \ },
+        \ 'separator': { 'left': '⮀', 'right': '⮂' },
+        \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+        \ }
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('elixir-lang/vim-elixir', {'on_ft': 'elixir'})
+  call dein#add("nvie/vim-flake8",        {'on_ft': 'python'})
+  call dein#add('scrooloose/syntastic',   {'on_ft': 'ruby'})
+  call dein#add('fatih/vim-go',           {'on_ft': 'go'})
 
-" You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
-" Required:
-call dein#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
