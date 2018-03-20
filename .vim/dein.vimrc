@@ -3,16 +3,17 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/yoshida/.vim/bundles/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/bundle/dein.vim/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/yoshida/.vim/bundles')
-  call dein#begin('/home/yoshida/.vim/bundles')
+if dein#load_state('~/.vim/bundle/dein.vim')
+  call dein#begin('~/.vim/bundle/dein.vim')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/yoshida/.vim/bundles/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.vim/bundle/dein.vim/repos/github.com/Shougo/dein.vim')
 
+  " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('vim-scripts/ctrlp.vim')
