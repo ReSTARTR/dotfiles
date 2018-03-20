@@ -19,4 +19,4 @@ if [ $? -ne 0 ]; then
 fi
 compinit -u
 
-export PROMPT='%n@%m:%{$fg_bold[blue]%}%c%{$reset_color%} $(git_super_status)%(!.#.$) '
+export PROMPT='%(?..%{$fg[red]%}*%? %{$reset_color%})%n@%m:%{$fg_bold[blue]%}%c%{$reset_color%} $(git_super_status)%(!.#.$) '
