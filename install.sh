@@ -42,6 +42,7 @@ fi
 wget -q https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -O /tmp/dein-installer.sh
 sh /tmp/dein-installer.sh ~/.vim/bundles
 vim +'call dein#install()' +qall
+vim +'LspInstallServer' +qall
 if [ ! -f $HOME/.ctags ]; then
   wget -q https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -O $HOME/.ctags
 fi
@@ -61,4 +62,15 @@ if [ ! -d $DOTFILES/.zsh/src/zsh-git-completion ]; then
 fi
 if [ ! -L ~/.zshrc ]; then
     ln -s $DOTFILES/.zshrc ~/.zshrc
+fi
+
+# go
+GO_TOOLS="golang.org/x/tools/cmd/goimports
+golang.org/x/tools/cmd/godoc
+github.com/x-motemen/ghq"
+which go > /dev/null
+if [ $? -eq 0 ]; then
+  for tool in $GO_TOOLS; do
+    GO111MODULES=off go get -u $tool
+  done
 fi
