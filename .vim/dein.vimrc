@@ -13,11 +13,7 @@ if dein#load_state('~/.vim/bundles')
   " Required:
   call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
   call dein#add('vim-scripts/ctrlp.vim')
-  call dein#add('vim-scripts/ag.vim')
-  call dein#add('junegunn/vim-easy-align')
   call dein#add("scrooloose/nerdtree")
   call dein#add('vim-scripts/rainbow_parentheses.vim')
   call dein#add('AndrewRadev/switch.vim')
