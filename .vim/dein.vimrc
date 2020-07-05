@@ -3,15 +3,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/yoshida/.vim/bundles/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/yoshida/.vim/bundles')
-  call dein#begin('/home/yoshida/.vim/bundles')
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/yoshida/.vim/bundles/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
@@ -38,7 +38,17 @@ if dein#load_state('/home/yoshida/.vim/bundles')
   call dein#add('elixir-lang/vim-elixir', {'on_ft': 'elixir'})
   call dein#add("nvie/vim-flake8",        {'on_ft': 'python'})
   call dein#add('scrooloose/syntastic',   {'on_ft': 'ruby'})
-  call dein#add('fatih/vim-go',           {'on_ft': 'go'})
+
+  call dein#add('prabirshrestha/async.vim')
+  call dein#add('prabirshrestha/asyncomplete.vim')
+  call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+  call dein#add('prabirshrestha/vim-lsp')
+  call dein#add('mattn/vim-lsp-settings')
+  call dein#add('mattn/vim-lsp-icons')
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('lighttiger2505/deoplete-vim-lsp')
+
+  call dein#add('mattn/vim-goimports')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
