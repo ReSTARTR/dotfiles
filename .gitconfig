@@ -1,6 +1,10 @@
 [user]
-    name =
-    email =
+    name = Masaki Yoshida
+    email = yoshida.masaki+restartr@gmail.com
+
+[commit]
+  template = ~/.gitmessage.txt
+
 [color]
     ui = auto
 

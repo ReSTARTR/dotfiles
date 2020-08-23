@@ -1,31 +1,32 @@
-set rtp+=$GOROOT/misc/vim
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-exe "set rtp+=".globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
+" refs: https://github.com/prabirshrestha/asyncomplete.vim
+let g:asyncomplete_auto_popup = 0
+let g:asyncomplete_auto_completeopt = 0
 
-let g:go_term_enabled = 1
-let g:go_term_mode = "split"
-" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-" let g:syntastic_go_checkers = ['go', 'golint', 'goimports']
-" let g:syntastic_mode_map = {}
-let g:go_list_type = "quickfix"
-let g:gofmt_command = 'goimports'
+" refs: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#vim-lsp
+if executable('gopls')
+  autocmd User lsp_setup call lsp#register_server({
+    \ 'name': 'go-lang',
+    \ 'cmd': {server_info->['gopls']},
+    \ 'whitelist': ['go'],
+    \ })
 
-" Mappings
-" see: https://github.com/fatih/vim-go/blob/master/ftplugin/go/mappings.vim
-au FileType go nmap <C-g>b  :GoBuild<CR>
-au FileType go nmap <C-g>r  :GoRun<CR>
-if has('nvim')
-  au FileType go nmap <C-g>rt <Plug>(go-run-tab)
+  " Mappings
+  "autocmd FileType go setlocal omnifunc=lsp#complete
+  "autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+  "autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+  "autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+  autocmd FileType go nmap <C-g>df :LspDefinition<CR>
+  "autocmd BufWritePre *.go LspDocumentFormatSync
 endif
 
-au FileType go nmap <C-g>t  :GoTest<CR>
-au FileType go nmap <C-g>cv :GoCoverage<CR>
+let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
 
-au FileType go nmap <C-g>df  :GoDef<CR>
-au FileType go nmap <C-g>dfp :GoDefPop<CR>
-au FileType go nmap <C-g>dfs :GoDefStack<CR>
-
-au FileType go nmap <C-g>dc :GoDoc<CR>
-au FileType go nmap <C-g>dcb :GoDocBrowser<CR>
-
-au FileType go nmap <C-g>i  :GoImports<CR>
+augroup vim_lsp_golangci_lint_langserver
+  au!
+  autocmd User lsp_setup call lsp#register_server({
+      \ 'name': 'golangci-lint-langserver',
+      \ 'cmd': {server_info->['golangci-lint-langserver']},
+      \ 'initialization_options': {'command': ['~/go/bin/golangci-lint', 'run', '--out-format', 'json']},
+      \ 'whitelist': ['go'],
+      \ })
+augroup END
