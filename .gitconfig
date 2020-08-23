@@ -18,8 +18,10 @@
 [alias]
     co   = checkout
     ci   = commit
+    ca   = commit --amend
     st   = status --short
     ft   = fetch
+    fp   = fetch --prune
     br   = branch
     df   = diff
     dfc  = diff --cached
