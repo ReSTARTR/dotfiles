@@ -5,6 +5,7 @@ scriptencoding utf-8
 let mapleader = ";"
 set verbose=0
 set encoding=utf-8
+set noswapfile
 
 set list
 set number
