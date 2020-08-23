@@ -21,6 +21,7 @@ else
 fi
 
 [ ! -L ~/.gitconfig  ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
+[ ! -L ~/.gitmessage.txt  ] && ln -s $DOTFILES/.gitmessage.txt ~/.gitmessage.txt
 [ ! -L ~/.gemrc      ] && ln -s $DOTFILES/.gemrc     ~/.gemrc
 
 # TMUX
