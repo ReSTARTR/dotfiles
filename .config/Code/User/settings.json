@@ -4,7 +4,6 @@
   // workbench
   "workbench.colorTheme": "Zenburn",
   "workbench.sideBar.location": "left",
-  "workbench.iconTheme": "vscode-great-icons",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
 
@@ -12,11 +11,9 @@
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 30,
-  // "editor.fontFamily": "Ubuntu Mono derivative Powerline, monospace",
-  "editor.fontFamily": "Go Mono, Menlo, monospace",
-  // "editor.fontFamily": "rounded-l-mplus-1mn-regular, Menlo, monospace",
-  "editor.fontSize": 12,
-  "editor.lineHeight": 16,
+  "editor.fontFamily": "'Noto Mono for Powerline', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 19,
   "editor.renderLineHighlight": "line",
   "editor.renderIndentGuides": false,
   "editor.renderControlCharacters": true,
@@ -24,22 +21,17 @@
   "editor.renderWhitespace": "boundary",
   "editor.formatOnSave": true,
   "editor.rulers": [100, 120],
+  "editor.suggestSelection": "first",
 
   // Terminal
-  "terminal.integrated.fontFamily":
-    "Ubuntu Mono derivative Powerline, monospace",
-  // "terminal.integrated.fontFamily": "SourceHanCodeJP-Normal",
-  // "terminal.integrated.fontFamily": "mononoki-Regular", //Nasu M Regular",
-  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "'Noto Mono for Powerline', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1,
 
   // Clock bar
-  "clock.dateFormat": "yyyy-mm-dd HH:MM:ss Z",
-
-  // Project Manager
-  "projectManager.showProjectNameInStatusBar": true,
+  "clock.dateFormat": "isoDateTime",
 
   // Vim
-  "vim.disableAnnoyingNeovimMessage": true,
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-c>": false,
@@ -50,38 +42,29 @@
   },
 
   // Go
-  "go.goroot": "/Users/yoshida/go19",
-  "go.toolsGopath": "${home}/go",
+  "go.goroot": "/usr/local/go",
+  "go.gopath": "~/workspaces/go",
+  "go.toolsGopath": "~/go",
   "go.formatTool": "goimports",
   "go.formatFlags": ["--local", "github.com/ReSTARTR"],
-  "go.formatOnSave": true,
-  "go.lintTool": "gometalinter",
-  "go.lintOnSave": "workspace",
-  "go.lintFlags": ["--vendor", "--enable-all", "--fast"],
-  "go.vetFlags": ["-all"],
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [],
+  "go.vetFlags": ["-all", "-v"],
+  "go.useLanguageServer": true,
+  "go.languageServerFlags": [
+    "--rpc.trace",
+    "-v",
+    ],
   "[go]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4
-  },
-
-  // Python
-  "python.formatting.autopep8Args": ["--in-place"],
-  "python.formatting.formatOnSave": true,
-  "python.linting.pep8Enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.lintOnSave": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.maxNumberOfProblems": 120,
-  "python.formatting.autopep8Path": "yapf",
-  "python.linting.pep8Args": ["--max-line-length=100"],
-  "python.linting.flake8Args": ["--max-line-length=100"],
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "'Go Mono for Powerline', 'Courier New', monospace",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
   },
 
   // Javascript
-  "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "prettier.semi": false,
@@ -91,10 +74,52 @@
     "editor.tabSize": 2
   },
 
-  // Ruby
-  "ruby.rubocop.executePath": "/home/yoshida/.rbenv/shims/",
-  "[ruby]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2
-  }
+  // Java
+  "java.home": "${home}/jdk1.8.0_241",
+
+  // GCP
+  "cloudcode.gke": {
+      "projectIds": [
+          "restartr-sandbox"
+      ]
+  },
+
+  "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
 }
