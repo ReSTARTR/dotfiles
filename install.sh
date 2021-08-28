@@ -80,6 +80,6 @@ github.com/x-motemen/ghq"
 which go > /dev/null
 if [ $? -eq 0 ]; then
   for tool in $GO_TOOLS; do
-    GO111MODULES=off go get -u $tool
+    go install $tool@latest
   done
 fi
