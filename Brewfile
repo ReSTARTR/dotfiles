@@ -16,6 +16,7 @@ brew "neovim"
 brew "shfmt"
 brew "awscli"
 brew "gcutil"
+brew "fabianishere/personal/pam_reattach"
 
 # Programming Languages
 brew "go@1.17"
@@ -27,7 +28,7 @@ brew "yarn"
 brew "deno"
 
 # Apps: https://formulae.brew.sh/cask/
-#cask "google-cloud-sdk"
+cask "google-cloud-sdk"
 #cask "google-japanese-ime"
 #cask "google-chrome"
 #cask "macvim"
