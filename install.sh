@@ -10,9 +10,9 @@ if [ "$(uname)" = "Darwin" ]; then
   brew bundle
 fi
 
-[ ! -L ~/.gitconfig  ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
-[ ! -L ~/.gitmessage.txt  ] && ln -s $DOTFILES/.gitmessage.txt ~/.gitmessage.txt
-[ ! -L ~/.gemrc      ] && ln -s $DOTFILES/.gemrc     ~/.gemrc
+[ ! -L ~/.gitconfig ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
+[ ! -L ~/.gitmessage.txt ] && ln -s $DOTFILES/.gitmessage.txt ~/.gitmessage.txt
+[ ! -L ~/.gemrc ] && ln -s $DOTFILES/.gemrc ~/.gemrc
 
 # TMUX
 if [ ! -L ~/.tmux.conf ]; then
@@ -23,9 +23,9 @@ if [ ! -d $DOTFILES/.tmux/src/tmux-powerline ]; then
 fi
 
 # vim
-[ ! -L ~/.vim        ] && ln -sf $DOTFILES/.vim ~/.vim
-[ ! -L ~/.vimrc      ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
-[ ! -L ~/.gvimrc     ] && ln -sf $DOTFILES/.gvimrc ~/.gvimrc
+[ ! -L ~/.vim ] && ln -sf $DOTFILES/.vim ~/.vim
+[ ! -L ~/.vimrc ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
+[ ! -L ~/.gvimrc ] && ln -sf $DOTFILES/.gvimrc ~/.gvimrc
 [ ! -d ~/.vim/bundles ] && mkdir -p ~/.vim/bundles
 if [ -f /tmp/dein-installer.sh ]; then
   rm /tmp/dein-installer.sh
@@ -60,14 +60,14 @@ curl -s \
   https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh \
   -o $DOTFILES/.zsh/_git
 if [ ! -L ~/.zshrc ]; then
-    ln -s $DOTFILES/.zshrc ~/.zshrc
+  ln -s $DOTFILES/.zshrc ~/.zshrc
 fi
 
 # go
 GO_TOOLS="golang.org/x/tools/cmd/goimports
 golang.org/x/tools/cmd/godoc
 github.com/x-motemen/ghq"
-which go > /dev/null
+which go >/dev/null
 if [ $? -eq 0 ]; then
   for tool in $GO_TOOLS; do
     go install $tool@latest
