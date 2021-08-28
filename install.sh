@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh -e
 export DOTFILES=$HOME/dotfiles
 
 # Check requirements
@@ -37,7 +37,7 @@ fi
 [ ! -L ~/.vimrc      ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
 [ ! -L ~/.gvimrc     ] && ln -sf $DOTFILES/.gvimrc ~/.gvimrc
 [ ! -d ~/.vim/bundles ] && mkdir -p ~/.vim/bundles
-if [ -F /tmp/dein-installer.sh ]; then
+if [ -f /tmp/dein-installer.sh ]; then
   rm /tmp/dein-installer.sh
 fi
 curl -s \
@@ -53,8 +53,8 @@ if [ ! -f $HOME/.ctags ]; then
 fi
 # neovim
 [ ! -d ~/.config ] && mkdir ~/.config
-[ ! -F ~/.config/nvim ] && ln -sf ~/.config/nvim ~/.vim
-[ ! -F ~/.config/nvim/init.vim ] && ln -sf ~/.config/nvim/init.vim ~/.vimrc
+[ ! -f ~/.config/nvim ] && ln -sf ~/.config/nvim ~/.vim
+[ ! -f ~/.config/nvim/init.vim ] && ln -sf ~/.vimrc ~/.config/nvim/init.vim
 
 # zsh
 if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then
