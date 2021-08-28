@@ -12,6 +12,7 @@ fi
 
 [ ! -L ~/.gitconfig ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
 [ ! -L ~/.gitmessage.txt ] && ln -s $DOTFILES/.gitmessage.txt ~/.gitmessage.txt
+[ ! -L ~/.ctags ] && ln -s $DOTFILES/.ctags ~/.ctags
 
 # TMUX
 if [ ! -L ~/.tmux.conf ]; then
@@ -35,11 +36,7 @@ curl -s \
 sh /tmp/dein-installer.sh ~/.vim/bundles
 vim +'call dein#install()' +qall
 vim +'LspInstallServer' +qall
-if [ ! -f $HOME/.ctags ]; then
-  curl -s \
-    https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags \
-    -o $HOME/.ctags
-fi
+
 # neovim
 [ ! -d ~/.config ] && mkdir ~/.config
 [ ! -f ~/.config/nvim ] && ln -sf ~/.config/nvim ~/.vim
