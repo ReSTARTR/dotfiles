@@ -61,3 +61,5 @@ curl -s \
 if [ ! -L ~/.zshrc ]; then
   ln -s $DOTFILES/.zshrc ~/.zshrc
 fi
+
+[ ! -d ~/Works ] && mkdir ~/Works
