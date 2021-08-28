@@ -79,21 +79,9 @@ set completeopt=menu,menuone,preview
 """ PLUGINS
 "------------------------------
 
-" source ~/.vim/vundle.vimrc
-" source ~/.vim/neobundle.vimrc
 source ~/.vim/dein.vimrc
-
-" source ~/.vim/neocomplcache.vimrc
 source ~/.vim/nerdtree.vimrc
-" source ~/.vim/nerdcommenter.vimrc
-" source ~/.vim/unite.vimrc
-" source ~/.vim/python-virtualenv.vimrc
-source ~/.vim/yankring.vimrc
 source ~/.vim/tagbar.vimrc
-
-if !exists('loaded_matchit')
-  runtime macros/matchit.vim
-end
 
 " NORMAL MODE
 nnoremap - :Switch<CR>
