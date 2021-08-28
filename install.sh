@@ -60,15 +60,15 @@ fi
 if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then
   git clone https://github.com/olivierverdier/zsh-git-prompt.git $DOTFILES/.zsh/src/zsh-git-prompt
 fi
-if [ ! -d $DOTFILES/.zsh/src/zsh-git-completion ]; then
-  mkdir -p $DOTFILES/.zsh/completion
-  curl -s \
-    https://raw.github.com/git/git/master/contrib/completion/git-completion.bash \
-    -o $DOTFILES/.zsh/src/zsh-git-completion.bash
-  curl -s \
-    https://raw.github.com/git/git/master/contrib/completion/git-completion.bash \
-    -o $DOTFILES/.zsh/completion/_git
+if [ ! -d $DOTFILES/.zsh/src/completion ]; then
+  mkdir -p $DOTFILES/.zsh/src/completion
 fi
+curl -s \
+  https://raw.github.com/git/git/master/contrib/completion/git-completion.bash \
+  -o $DOTFILES/.zsh/src/git-completion.bash
+curl -s \
+  https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh \
+  -o $DOTFILES/.zsh/_git
 if [ ! -L ~/.zshrc ]; then
     ln -s $DOTFILES/.zshrc ~/.zshrc
 fi

@@ -1,5 +1,6 @@
 .zsh/src
 .zsh/completion
+.zsh/_git
 .vim/bundles
 .vim/nvim
 .tmux
