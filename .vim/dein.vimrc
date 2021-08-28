@@ -15,13 +15,8 @@ if dein#load_state('~/.vim/bundles')
 
   call dein#add('vim-scripts/ctrlp.vim')
   call dein#add("scrooloose/nerdtree")
-  call dein#add('vim-scripts/rainbow_parentheses.vim')
-  call dein#add('AndrewRadev/switch.vim')
-  call dein#add('vim-scripts/endwise.vim')
-  call dein#add('mileszs/ack.vim')
   call dein#add('majutsushi/tagbar')
   call dein#add('vim-scripts/ctags.vim')
-  call dein#add('itchyny/landscape.vim')
   call dein#add('itchyny/lightline.vim')
   let g:lightline = {
         \ 'component': {
@@ -31,9 +26,6 @@ if dein#load_state('~/.vim/bundles')
         \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
         \ }
   call dein#add('tpope/vim-fugitive')
-  call dein#add('elixir-lang/vim-elixir', {'on_ft': 'elixir'})
-  call dein#add("nvie/vim-flake8",        {'on_ft': 'python'})
-  call dein#add('scrooloose/syntastic',   {'on_ft': 'ruby'})
 
   call dein#add('prabirshrestha/async.vim')
   call dein#add('prabirshrestha/asyncomplete.vim')
@@ -44,10 +36,11 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('lighttiger2505/deoplete-vim-lsp')
 
+  " languages
+  call dein#add('cespare/vim-toml')
+  call dein#add("nvie/vim-flake8",        {'on_ft': 'python'})
+  call dein#add('scrooloose/syntastic',   {'on_ft': 'ruby'})
   call dein#add('mattn/vim-goimports')
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
   " Required:
   call dein#end()
