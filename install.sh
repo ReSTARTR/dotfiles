@@ -9,6 +9,9 @@ if [ "$(uname)" = "Darwin" ]; then
   fi
   brew bundle
 fi
+go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/cmd/godoc@latest
+go install github.com/nametake/golangci-lint-langserver@latest
 
 [ ! -L ~/.gitconfig ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
 [ ! -L ~/.gitmessage.txt ] && ln -s $DOTFILES/.gitmessage.txt ~/.gitmessage.txt
@@ -57,15 +60,4 @@ curl -s \
   -o $DOTFILES/.zsh/_git
 if [ ! -L ~/.zshrc ]; then
   ln -s $DOTFILES/.zshrc ~/.zshrc
-fi
-
-# go
-GO_TOOLS="golang.org/x/tools/cmd/goimports
-golang.org/x/tools/cmd/godoc
-github.com/x-motemen/ghq"
-which go >/dev/null
-if [ $? -eq 0 ]; then
-  for tool in $GO_TOOLS; do
-    go install $tool@latest
-  done
 fi

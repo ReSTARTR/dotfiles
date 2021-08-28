@@ -26,7 +26,7 @@ augroup vim_lsp_golangci_lint_langserver
   autocmd User lsp_setup call lsp#register_server({
       \ 'name': 'golangci-lint-langserver',
       \ 'cmd': {server_info->['golangci-lint-langserver']},
-      \ 'initialization_options': {'command': ['~/go/bin/golangci-lint', 'run', '--out-format', 'json']},
+      \ 'initialization_options': {'command': ['golangci-lint', 'run', '--out-format', 'json']},
       \ 'whitelist': ['go'],
       \ })
 augroup END

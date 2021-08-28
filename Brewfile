@@ -16,6 +16,12 @@ brew "neovim"
 brew "awscli"
 brew "shfmt"
 
+# Programming Languages
+brew "go@1.17"
+brew "gopls"
+brew "golangci-lint"
+brew "efm-langserver" # required from vim-lsp
+
 # Apps: https://formulae.brew.sh/cask/
 #cask "google-japanese-ime"
 #cask "google-chrome"
