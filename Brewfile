@@ -14,6 +14,7 @@ brew "ctags"
 brew "vim"
 brew "neovim"
 brew "awscli"
+brew "shfmt"
 
 # Apps: https://formulae.brew.sh/cask/
 #cask "google-japanese-ime"
