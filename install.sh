@@ -1,6 +1,15 @@
 #!/bin/sh -e
 export DOTFILES=$HOME/dotfiles
 
+if [ "$(uname)" = "Darwin" ]; then
+  xcode-select --install
+  if [ ! -f /usr/local/bin/brew ]; then
+    echo "Install homebrew => https://brew.sh"
+    exit 1
+  fi
+  brew bundle
+fi
+
 # Check requirements
 _REQUIREMENTS="zsh vim git"
 for cmd in $_REQUIREMENTS; do

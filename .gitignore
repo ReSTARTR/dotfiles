@@ -4,3 +4,4 @@
 .vim/bundles
 .vim/nvim
 .tmux
+Brewfile.lock.json
