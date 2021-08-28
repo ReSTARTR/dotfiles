@@ -13,16 +13,21 @@ brew "watch"
 brew "ctags"
 brew "vim"
 brew "neovim"
-brew "awscli"
 brew "shfmt"
+brew "awscli"
+brew "gcutil"
 
 # Programming Languages
 brew "go@1.17"
 brew "gopls"
 brew "golangci-lint"
 brew "efm-langserver" # required from vim-lsp
+brew "node@14"
+brew "yarn"
+brew "deno"
 
 # Apps: https://formulae.brew.sh/cask/
+#cask "google-cloud-sdk"
 #cask "google-japanese-ime"
 #cask "google-chrome"
 #cask "macvim"
