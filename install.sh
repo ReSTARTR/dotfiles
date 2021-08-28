@@ -40,12 +40,16 @@ fi
 if [ -F /tmp/dein-installer.sh ]; then
   rm /tmp/dein-installer.sh
 fi
-curl -s https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh -o /tmp/dein-installer.sh
+curl -s \
+  https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh \
+  -o /tmp/dein-installer.sh
 sh /tmp/dein-installer.sh ~/.vim/bundles
 vim +'call dein#install()' +qall
 vim +'LspInstallServer' +qall
 if [ ! -f $HOME/.ctags ]; then
-  curl -s https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags -o $HOME/.ctags
+  curl -s \
+    https://raw.githubusercontent.com/mmorearty/elixir-ctags/master/.ctags \
+    -o $HOME/.ctags
 fi
 # neovim
 [ ! -d ~/.config ] && mkdir ~/.config
@@ -58,8 +62,12 @@ if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then
 fi
 if [ ! -d $DOTFILES/.zsh/src/zsh-git-completion ]; then
   mkdir -p $DOTFILES/.zsh/completion
-  curl -s https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o $DOTFILES/.zsh/src/zsh-git-completion.bash
-  curl -s https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o $DOTFILES/.zsh/completion/_git
+  curl -s \
+    https://raw.github.com/git/git/master/contrib/completion/git-completion.bash \
+    -o $DOTFILES/.zsh/src/zsh-git-completion.bash
+  curl -s \
+    https://raw.github.com/git/git/master/contrib/completion/git-completion.bash \
+    -o $DOTFILES/.zsh/completion/_git
 fi
 if [ ! -L ~/.zshrc ]; then
     ln -s $DOTFILES/.zshrc ~/.zshrc
