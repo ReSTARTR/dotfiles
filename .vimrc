@@ -107,6 +107,9 @@ source ~/.vim/go.vimrc
 " colorscheme landscape
 set t_Co=256
 
+" Shfmt
+let g:shfmt_extra_args = '-i 2'
+let g:shfmt_fmt_on_save = 1
 
 " CtrlP
 let g:ctrlp_map = '<C-p>'

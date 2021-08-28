@@ -41,6 +41,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add("nvie/vim-flake8",        {'on_ft': 'python'})
   call dein#add('scrooloose/syntastic',   {'on_ft': 'ruby'})
   call dein#add('mattn/vim-goimports')
+  call dein#add('z0mbix/vim-shfmt', {'on_ft': 'sh'})
 
   " Required:
   call dein#end()
