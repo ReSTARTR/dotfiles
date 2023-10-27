@@ -23,19 +23,13 @@ fi
 
 # vim
 [ ! -L ~/.vim ] && ln -sf $DOTFILES/.vim ~/.vim
-[ ! -L ~/.vimrc ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
-[ ! -L ~/.gvimrc ] && ln -sf $DOTFILES/.gvimrc ~/.gvimrc
-[ ! -d ~/.vim/bundles ] && mkdir -p ~/.vim/bundles
-if [ -f /tmp/dein-installer.sh ]; then
-  rm /tmp/dein-installer.sh
-fi
+[ -f /tmp/dein-installer.sh ] && rm /tmp/dein-installer.sh
 curl -s \
-  https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh \
+  https://raw.githubusercontent.com/Shougo/dein-installer.vim/main/installer.sh \
   -o /tmp/dein-installer.sh
-sh /tmp/dein-installer.sh ~/.vim/bundles
+sh /tmp/dein-installer.sh ~/.vim/bundle --use-vim-config
+[ ! -L ~/.vimrc ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
 vim +'call dein#install()' +qall
-vim +'LspInstallServer' +qall
-
 # neovim
 [ ! -d ~/.config ] && mkdir ~/.config
 [ ! -f ~/.config/nvim ] && ln -sf ~/.config/nvim ~/.vim

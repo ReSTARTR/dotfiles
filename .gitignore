@@ -1,7 +1,8 @@
 .zsh/src
 .zsh/completion
 .zsh/_git
-.vim/bundles
+.vim/bundle
 .vim/nvim
+.vim/.netrwhist
 .tmux
 Brewfile.lock.json
