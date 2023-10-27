@@ -13,6 +13,7 @@ brew "watch"
 brew "ctags"
 brew "vim"
 brew "shfmt"
+brew "pam_reattach"
 
 # Programming Languages
 brew "efm-langserver" # required from vim-lsp
