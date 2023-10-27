@@ -39,10 +39,10 @@ if [ ! -d $DOTFILES/.zsh/src/completion ]; then
   mkdir -p $DOTFILES/.zsh/src/completion
 fi
 curl -s \
-  https://raw.github.com/git/git/master/contrib/completion/git-completion.bash \
+  https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
   -o $DOTFILES/.zsh/src/git-completion.bash
 curl -s \
-  https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh \
+  https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh \
   -o $DOTFILES/.zsh/_git
 if [ ! -L ~/.zshrc ]; then
   ln -s $DOTFILES/.zshrc ~/.zshrc
