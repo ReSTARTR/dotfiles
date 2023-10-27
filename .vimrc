@@ -49,12 +49,6 @@ augroup END
 source ~/.vim/dein.vimrc
 source ~/.vim/nerdtree.vimrc
 source ~/.vim/tagbar.vimrc
-source ~/.vim/go.vimrc
+source ~/.vim/lsp.vimrc
+" source ~/.vim/go.vimrc
 source ~/.vim/shfmt.vimrc
-
-" NeoVim
-if has('nvim')
-  if has('mouse')
-    set mouse-=a
-  endif
-endif

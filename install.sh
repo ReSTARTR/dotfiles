@@ -30,10 +30,6 @@ curl -s \
 sh /tmp/dein-installer.sh ~/.vim/bundle --use-vim-config
 [ ! -L ~/.vimrc ] && ln -sf $DOTFILES/.vimrc ~/.vimrc
 vim +'call dein#install()' +qall
-# neovim
-[ ! -d ~/.config ] && mkdir ~/.config
-[ ! -f ~/.config/nvim ] && ln -sf ~/.config/nvim ~/.vim
-[ ! -f ~/.config/nvim/init.vim ] && ln -sf ~/.vimrc ~/.config/nvim/init.vim
 
 # zsh
 if [ ! -d $DOTFILES/.zsh/src/zsh-git-prompt ]; then
