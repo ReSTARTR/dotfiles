@@ -2,8 +2,7 @@
 export DOTFILES="$(cd "$(dirname $0)"; pwd -P)"
 
 if [ "$(uname)" = "Darwin" ]; then
-  xcode-select --install
-  if [ ! -f /usr/local/bin/brew ]; then
+  if [ ! -f /opt/homebrew/bin/brew ]; then
     echo "Install homebrew => https://brew.sh"
     exit 1
   fi
