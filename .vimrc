@@ -14,7 +14,7 @@ set list
 set number
 set nopaste
 set noautoindent
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set expandtab
 set showtabline=2
