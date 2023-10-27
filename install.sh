@@ -8,9 +8,6 @@ if [ "$(uname)" = "Darwin" ]; then
   fi
   brew bundle
 fi
-go install golang.org/x/tools/cmd/goimports@latest
-go install golang.org/x/tools/cmd/godoc@latest
-go install github.com/nametake/golangci-lint-langserver@latest
 
 [ ! -L ~/.gitconfig ] && ln -s $DOTFILES/.gitconfig ~/.gitconfig
 [ ! -L ~/.gitmessage.txt ] && ln -s $DOTFILES/.gitmessage.txt ~/.gitmessage.txt
