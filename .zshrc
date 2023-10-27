@@ -12,6 +12,3 @@ source $DOTFILES/.zsh/history.zshrc
 source $DOTFILES/.zsh/path.zshrc
 source $DOTFILES/.zsh/peco.zshrc
 source $DOTFILES/.zsh/git-prompt.zshrc
-if [ "$(uname)" = "Darwin" ]; then
-  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-fi
