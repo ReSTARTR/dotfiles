@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh -e
-export DOTFILES=$(dirname $0)
+export DOTFILES="$(cd "$(dirname $0)"; pwd -P)"
 
 if [ "$(uname)" = "Darwin" ]; then
   xcode-select --install
