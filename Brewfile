@@ -15,6 +15,7 @@ brew "vim"
 brew "shfmt"
 brew "pam_reattach"
 brew "bat"
+brew "graphviz"
 
 # Programming Languages
 brew "efm-langserver" # required from vim-lsp
